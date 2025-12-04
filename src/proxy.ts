@@ -1,12 +1,13 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-const BASIC_AUTH_USER = process.env.BASIC_AUTH_USER || "admin";
-const BASIC_AUTH_PASSWORD = process.env.BASIC_AUTH_PASSWORD || "password";
+const BASIC_AUTH_USER = process.env.BASIC_AUTH_USER?.trim() || "admin";
+const BASIC_AUTH_PASSWORD = process.env.BASIC_AUTH_PASSWORD?.trim() || "password";
 
 export function proxy(request: NextRequest) {
   // 本番環境でのみBasic認証を適用（環境変数で制御可能）
-  if (process.env.ENABLE_BASIC_AUTH !== "true") {
+  const enableAuth = process.env.ENABLE_BASIC_AUTH?.trim();
+  if (enableAuth !== "true") {
     return NextResponse.next();
   }
 
