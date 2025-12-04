@@ -1,65 +1,184 @@
-import Image from "next/image";
+import { Header, Footer } from "@/components/layout";
+import { siteConfig } from "@/data/site";
+import { event } from "@/data/event";
 
 export default function Home() {
+  const eventDate = new Date(event.date);
+  const formattedDate = eventDate.toLocaleDateString("ja-JP", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    weekday: "short",
+  });
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <>
+      <Header />
+
+      <main id="main-content">
+        {/* Hero Section */}
+        <section
+          className="relative h-screen flex items-center justify-center"
+          aria-label="メインビジュアル"
+        >
+          {/* Background */}
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url(${siteConfig.heroImage})`,
+            }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+            <div className="absolute inset-0 bg-black/60" />
+          </div>
+
+          {/* Content */}
+          <div className="relative z-10 text-center px-6 max-w-4xl">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-wider mb-6">
+              ZUSHI LIVE
+              <br />
+              INCLUSIVE
+            </h1>
+            <p className="text-xl md:text-2xl lg:text-3xl text-white/90 mb-8">
+              {siteConfig.statement}
+            </p>
+            <p className="text-lg md:text-xl text-white/70">
+              {formattedDate}
+            </p>
+          </div>
+
+          {/* Scroll Indicator */}
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+            <span className="text-xs tracking-widest text-white/60">
+              SCROLL
+            </span>
+            <svg
+              className="w-5 h-5 text-white/60"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              />
+            </svg>
+          </div>
+        </section>
+
+        {/* About Section */}
+        <section className="py-24 md:py-32 px-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl font-medium mb-8">
+              音楽は、最初からずっと、
+              <br />
+              インクルーシブだ
+            </h2>
+            <p className="text-white/70 leading-relaxed">
+              障がい者アーティストとトップアーティストが共演する、
+              インクルーシブなコンサート。
+              ジャンルも、主役も、境界線もない。
+              誰もが楽しめる音楽コンサートを、逗子から。
+            </p>
+          </div>
+        </section>
+
+        {/* Event Info Section */}
+        <section className="py-24 md:py-32 px-6 bg-white/5">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-medium text-center mb-16">
+              EVENT INFO
+            </h2>
+
+            <div className="grid md:grid-cols-2 gap-12">
+              {/* Date & Venue */}
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-sm text-white/50 mb-2">日時</h3>
+                  <p className="text-lg">{formattedDate}</p>
+                  <p className="text-white/70">
+                    開場 {event.doorTime} / 開演 {event.startTime}
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-sm text-white/50 mb-2">会場</h3>
+                  <p className="text-lg">{event.venue}</p>
+                  <p className="text-white/70">{event.address}</p>
+                  <p className="text-sm text-white/50 mt-1">
+                    {event.capacity}席（車椅子席あり）
+                  </p>
+                </div>
+              </div>
+
+              {/* Tickets */}
+              <div>
+                <h3 className="text-sm text-white/50 mb-4">チケット料金</h3>
+                <ul className="space-y-3">
+                  {event.prices.map((price) => (
+                    <li
+                      key={price.label}
+                      className="flex items-baseline justify-between border-b border-white/10 pb-3"
+                    >
+                      <span className="text-white/80">{price.label}</span>
+                      <div className="text-right">
+                        <span className="text-lg">
+                          {price.price === 0
+                            ? "無料"
+                            : `¥${price.price.toLocaleString()}`}
+                        </span>
+                        {price.note && (
+                          <span className="block text-xs text-white/50">
+                            {price.note}
+                          </span>
+                        )}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+
+                {event.ticketUrl ? (
+                  <a
+                    href={event.ticketUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-8 px-8 py-3 bg-primary text-black font-medium hover:bg-primary-dark transition-colors"
+                  >
+                    チケットを購入する
+                  </a>
+                ) : (
+                  <p className="mt-8 text-white/50">
+                    チケット情報は近日公開予定
+                  </p>
+                )}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        {siteConfig.crowdfundingUrl && (
+          <section className="py-24 md:py-32 px-6 text-center">
+            <h2 className="text-2xl md:text-3xl font-medium mb-6">
+              応援する
+            </h2>
+            <p className="text-white/70 mb-8 max-w-xl mx-auto">
+              クラウドファンディングでプロジェクトを支援することができます。
+            </p>
+            <a
+              href={siteConfig.crowdfundingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-3 border border-white/30 hover:border-white hover:bg-white/5 transition-all"
+            >
+              クラウドファンディングを見る
+            </a>
+          </section>
+        )}
       </main>
-    </div>
+
+      <Footer />
+    </>
   );
 }
