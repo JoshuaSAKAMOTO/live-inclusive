@@ -4,9 +4,9 @@ export const siteConfig: SiteConfig = {
   name: "逗子ライブインクルーシブ",
   description:
     "障がい者アーティストとトップアーティストが共演するインクルーシブなコンサート",
-  statement: "誰もが楽しめる音楽コンサート",
+  statement: "音楽は、最初からずっと、インクルーシブだ",
   heroImage: "/images/hero.jpg",
-  crowdfundingUrl: undefined,
+  crowdfundingUrl: "https://camp-fire.jp/projects/895664/view",
   contactPhone: "050-3578-2929",
   contactEmail: "info@zushiliveinclusive.com",
   socialLinks: [

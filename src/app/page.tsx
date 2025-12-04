@@ -33,10 +33,8 @@ export default function Home() {
 
           {/* Content */}
           <div className="relative z-10 text-center px-6 max-w-4xl">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-wider mb-6">
-              ZUSHI LIVE
-              <br />
-              INCLUSIVE
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-wider mb-6">
+              ZUSHI LIVE INCLUSIVE
             </h1>
             <p className="text-xl md:text-2xl lg:text-3xl text-white/90 mb-8">
               {siteConfig.statement}
@@ -68,18 +66,23 @@ export default function Home() {
         </section>
 
         {/* About Section */}
-        <section className="py-24 md:py-32 px-6">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-medium mb-8">
-              音楽は、最初からずっと、
+        <section className="relative h-screen flex items-start justify-start pt-32 md:pt-44">
+          {/* Background */}
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url(/images/statement.jpg)`,
+            }}
+          >
+            <div className="absolute inset-0 bg-black/40" />
+          </div>
+
+          {/* Content */}
+          <div className="relative z-10 text-left px-8 md:px-16">
+            <p className="text-white/90 leading-relaxed text-lg md:text-xl">
+              障がい者アーティストとトップアーティストが共演する、インクルーシブなコンサート。
               <br />
-              インクルーシブだ
-            </h2>
-            <p className="text-white/70 leading-relaxed">
-              障がい者アーティストとトップアーティストが共演する、
-              インクルーシブなコンサート。
-              ジャンルも、主役も、境界線もない。
-              誰もが楽しめる音楽コンサートを、逗子から。
+              ジャンルも、主役も、境界線もない。誰もが楽しめる音楽コンサートを、逗子から。
             </p>
           </div>
         </section>

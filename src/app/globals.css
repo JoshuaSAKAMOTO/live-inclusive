@@ -49,8 +49,3 @@ body {
   top: 0;
 }
 
-/* Selection */
-::selection {
-  background: var(--color-primary);
-  color: var(--color-background);
-}
