@@ -4,7 +4,7 @@ import type { NextRequest } from "next/server";
 const BASIC_AUTH_USER = process.env.BASIC_AUTH_USER || "admin";
 const BASIC_AUTH_PASSWORD = process.env.BASIC_AUTH_PASSWORD || "password";
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   // 本番環境でのみBasic認証を適用（環境変数で制御可能）
   if (process.env.ENABLE_BASIC_AUTH !== "true") {
     return NextResponse.next();
