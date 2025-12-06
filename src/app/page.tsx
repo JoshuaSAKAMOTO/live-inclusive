@@ -162,21 +162,21 @@ export default function Home() {
 
         {/* CTA Section */}
         {siteConfig.crowdfundingUrl && (
-          <section className="py-24 md:py-32 px-6 text-center">
-            <h2 className="text-2xl md:text-3xl font-medium mb-6">
-              応援する
-            </h2>
-            <p className="text-white/70 mb-8 max-w-xl mx-auto">
-              クラウドファンディングでプロジェクトを支援することができます。
-            </p>
-            <a
-              href={siteConfig.crowdfundingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-8 py-3 border border-white/30 hover:border-white hover:bg-white/5 transition-all"
-            >
-              クラウドファンディングを見る
-            </a>
+          <section className="py-24 md:py-32 px-6">
+            <div className="max-w-4xl mx-auto">
+              <a
+                href={siteConfig.crowdfundingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block hover:opacity-90 transition-opacity"
+              >
+                <img
+                  src="/images/campfire.png"
+                  alt="クラウドファンディング - ネクストゴール60万円に挑戦中"
+                  className="w-full h-auto rounded-lg"
+                />
+              </a>
+            </div>
           </section>
         )}
       </main>
