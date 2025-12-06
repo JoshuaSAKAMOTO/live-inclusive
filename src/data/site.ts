@@ -10,9 +10,8 @@ export const siteConfig: SiteConfig = {
   contactPhone: "050-3578-2929",
   contactEmail: "info@zushiliveinclusive.com",
   socialLinks: [
-    { type: "facebook", url: "https://facebook.com/" },
-    { type: "instagram", url: "https://instagram.com/" },
-    { type: "twitter", url: "https://twitter.com/" },
+    { type: "instagram", url: "https://www.instagram.com/live_inclusive/" },
+    { type: "facebook", url: "https://www.facebook.com/zushiliveinclusive/" },
   ],
 };
 
