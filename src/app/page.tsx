@@ -163,12 +163,6 @@ export default function Home() {
         {/* CTA Section */}
         {siteConfig.crowdfundingUrl && (
           <section className="py-24 md:py-32 px-6 text-center">
-            <h2 className="text-2xl md:text-3xl font-medium mb-6">
-              応援する
-            </h2>
-            <p className="text-white/70 mb-8 max-w-xl mx-auto">
-              クラウドファンディングでプロジェクトを支援することができます。
-            </p>
             <div className="max-w-4xl mx-auto mb-8">
               <a
                 href={siteConfig.crowdfundingUrl}
