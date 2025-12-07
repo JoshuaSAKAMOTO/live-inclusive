@@ -8,7 +8,7 @@ export const siteConfig: SiteConfig = {
   heroImage: "/images/hero.jpg",
   crowdfundingUrl: "https://camp-fire.jp/projects/895664/view",
   contactPhone: "050-3578-2929",
-  contactEmail: "info@zushiliveinclusive.com",
+  contactEmail: "support@zushiliveinclusive.com",
   socialLinks: [
     { type: "instagram", url: "https://www.instagram.com/live_inclusive/" },
     { type: "facebook", url: "https://www.facebook.com/zushiliveinclusive/" },
