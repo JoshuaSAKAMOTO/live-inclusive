@@ -7,7 +7,7 @@ export interface Performer {
   thumbnail: string;
   photo: string;
   sns?: {
-    type: "twitter" | "instagram" | "facebook" | "youtube" | "website";
+    type: "twitter" | "x" | "instagram" | "facebook" | "youtube" | "website";
     url: string;
   }[];
 }
@@ -37,7 +37,7 @@ export interface SiteConfig {
   contactPhone: string;
   contactEmail: string;
   socialLinks: {
-    type: "facebook" | "instagram" | "twitter" | "youtube";
+    type: "facebook" | "instagram" | "twitter" | "x" | "youtube";
     url: string;
   }[];
 }
