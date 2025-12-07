@@ -3,8 +3,8 @@
 @theme {
   --color-background: #0a0a0a;
   --color-foreground: #ffffff;
-  --color-primary: #ff44e3;
-  --color-primary-dark: #cc36b5;
+  --color-primary: #ffffff;
+  --color-primary-dark: #cccccc;
   --color-muted: #888888;
   --color-border: #333333;
   --font-sans: var(--font-noto-sans);
