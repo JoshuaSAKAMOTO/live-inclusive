@@ -100,17 +100,18 @@ export const performers: Performer[] = [
     photo: "/images/performers/shuichihidano.png",
     sns: [{ type: "website", url: "http://www.hidashu.com/" }],
   },
-  {
-    id: "miura-tsuyoshi",
-    name: "三浦剛",
-    nameKana: "みうら つよし",
-    role: "手話パフォーマンス",
-    profile:
-      "俳優。同じく俳優で聴覚障がい者の忍足亜希子と共演、その後結婚したことをきっかけに手話を習得。忍足との経験が映画「僕が君の耳になる」のモデルとなるなど、ろう者への理解につながる活動を推進している。",
-    thumbnail: "/images/performers/tsuyoshimiura.png",
-    photo: "/images/performers/tsuyoshimiura.png",
-    sns: [{ type: "website", url: "https://www.cubeinc.co.jp/archives/artist/miuratsuyoshi" }],
-  },
+  // 三浦剛さんは発表前のためコメントアウト
+  // {
+  //   id: "miura-tsuyoshi",
+  //   name: "三浦剛",
+  //   nameKana: "みうら つよし",
+  //   role: "手話パフォーマンス",
+  //   profile:
+  //     "俳優。同じく俳優で聴覚障がい者の忍足亜希子と共演、その後結婚したことをきっかけに手話を習得。忍足との経験が映画「僕が君の耳になる」のモデルとなるなど、ろう者への理解につながる活動を推進している。",
+  //   thumbnail: "/images/performers/tsuyoshimiura.png",
+  //   photo: "/images/performers/tsuyoshimiura.png",
+  //   sns: [{ type: "website", url: "https://www.cubeinc.co.jp/archives/artist/miuratsuyoshi" }],
+  // },
   {
     id: "watanabe-chihiro",
     name: "わたなべちひろ",

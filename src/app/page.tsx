@@ -1,6 +1,9 @@
 import { Header, Footer } from "@/components/layout";
 import { siteConfig } from "@/data/site";
 import { event } from "@/data/event";
+import { performers } from "@/data/performers";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   const eventDate = new Date(event.date);
@@ -131,6 +134,37 @@ export default function Home() {
               <br />
               ジャンルも、主役も、境界線もない。誰もが楽しめる音楽コンサートを、逗子から。
             </p>
+          </div>
+        </section>
+
+        {/* Performers Section */}
+        <section className="py-24 md:py-32 px-6">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-medium text-center mb-16">
+              PERFORMERS
+            </h2>
+            <div className="grid grid-cols-3 md:grid-cols-6 gap-4 md:gap-6">
+              {performers.map((performer) => (
+                <Link
+                  key={performer.id}
+                  href={`/performers/${performer.id}`}
+                  className="group"
+                >
+                  <div className="aspect-square relative overflow-hidden bg-white/5 mb-2">
+                    <Image
+                      src={performer.thumbnail}
+                      alt={performer.name}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <h3 className="text-xs md:text-sm font-medium group-hover:text-white/80 transition-colors">
+                    {performer.name}
+                  </h3>
+                  <p className="text-xs text-white/50">{performer.role}</p>
+                </Link>
+              ))}
+            </div>
           </div>
         </section>
 
