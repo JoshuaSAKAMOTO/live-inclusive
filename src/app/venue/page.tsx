@@ -17,7 +17,7 @@ export default function VenuePage() {
           {/* Page Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold tracking-wider mb-4">
-              VENUE
+              LOCATION
             </h1>
             <p className="text-white/60">会場・アクセス</p>
           </div>

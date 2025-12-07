@@ -2,6 +2,7 @@ import { Header, Footer } from "@/components/layout";
 import { siteConfig } from "@/data/site";
 import { event } from "@/data/event";
 import { performers } from "@/data/performers";
+import { InstagramEmbed } from "@/components/instagram-embed";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -172,7 +173,7 @@ export default function Home() {
         <section className="py-24 md:py-32 px-6 bg-white/5">
           <div className="max-w-md mx-auto">
             <h2 className="text-2xl md:text-3xl font-medium text-center mb-12">
-              チケット料金
+              TICKETS
             </h2>
             <ul className="space-y-3 mb-8">
               <li className="flex items-baseline justify-between border-b border-white/10 pb-3">
@@ -226,6 +227,48 @@ export default function Home() {
             </a>
           </section>
         )}
+
+        {/* Location Section */}
+        <section className="py-24 md:py-32 px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-medium text-center mb-12">
+              LOCATION
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-white/5 p-8 flex flex-col justify-center">
+                <h3 className="text-xl md:text-2xl font-medium mb-2">{event.venue}</h3>
+                <p className="text-white/60 mb-6">{event.address}</p>
+                <div className="space-y-1 text-sm text-white/70">
+                  <p>JR横須賀線「逗子駅」より徒歩5分</p>
+                  <p>京急逗子線「逗子・葉山駅」より徒歩7分</p>
+                </div>
+              </div>
+              <div className="aspect-square md:aspect-auto">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1628.2253724492516!2d139.582397!3d35.29478!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601846ec27a449d1%3A0x81abc818032f36c3!2z6YCX5a2Q5paH5YyW44OX44Op44K244Ob44O844Or!5e0!3m2!1sja!2sus!4v1765114643056!5m2!1sja!2sus"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, minHeight: "300px" }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="会場マップ"
+                  className="bg-white/5"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Instagram Section */}
+        <section className="py-24 md:py-32 px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 justify-items-center">
+              <InstagramEmbed postUrl="https://www.instagram.com/p/DRt03J6EtUs/" />
+              <InstagramEmbed postUrl="https://www.instagram.com/p/DR83qIqkhzF/" />
+            </div>
+          </div>
+        </section>
       </main>
 
       <Footer />
