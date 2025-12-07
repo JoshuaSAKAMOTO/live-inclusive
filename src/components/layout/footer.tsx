@@ -6,13 +6,35 @@ export function Footer() {
   return (
     <footer role="contentinfo" className="bg-black border-t border-white/10">
       <div className="max-w-6xl mx-auto px-6 py-16">
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid md:grid-cols-[2fr_1fr_1fr] gap-6">
           {/* Site Info */}
           <div>
-            <h2 className="text-lg font-medium mb-4">{siteConfig.name}</h2>
-            <p className="text-sm text-white/60 leading-relaxed">
-              {siteConfig.description}
-            </p>
+            <div className="text-sm text-white/60 leading-relaxed space-y-2 mb-6">
+              <p>
+                <span className="text-white/80">主催：</span>
+                逗子ライブインクルーシブ実行委員会/逗子文化プラザ市民交流センター
+              </p>
+              <p>
+                <span className="text-white/80">共催：</span>
+                逗子文化プラザホール/逗子市
+              </p>
+              <p>
+                <span className="text-white/80">後援：</span>
+                逗子市教育委員会/逗子市社会福祉協議会/神奈川県
+                <br />
+                <span className="text-white/80 invisible">後援：</span>
+                鎌倉市（予定）/横須賀市/葉山町（予定）
+              </p>
+              <p>
+                <span className="text-white/80">助成：</span>
+                神奈川県マグカル展開促進助成
+              </p>
+            </div>
+            <img
+              src="/images/mag-cul.jpg"
+              alt="神奈川文化プログラム マグカル"
+              className="h-32 w-auto"
+            />
           </div>
 
           {/* Navigation */}

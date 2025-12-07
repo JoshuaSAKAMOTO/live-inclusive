@@ -36,11 +36,8 @@ export default function Home() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-wider mb-6">
               ZUSHI LIVE INCLUSIVE
             </h1>
-            <p className="text-xl md:text-2xl lg:text-3xl text-white/90 mb-8">
-              {siteConfig.statement}
-            </p>
             <p className="text-lg md:text-xl text-white/70">
-              {formattedDate}
+              {formattedDate}　{event.venue}
             </p>
           </div>
 
@@ -65,11 +62,61 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Statement Section */}
+        <section className="py-24 md:py-32 px-6">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-16 leading-relaxed">
+              「音楽は、最初からずっと、
+              <br />
+              インクルーシブだ」
+            </h2>
+
+            <div className="space-y-6 text-white/80 leading-relaxed">
+              <p>
+                海と山に囲まれた、穏やかな空気が流れる逗子。
+                この地で、誰もが楽しめる音楽コンサートを開催します。
+              </p>
+
+              <p>
+                「逗子ライブインクルーシブ」は、障がい者アーティストと
+                トップアーティストが共演するインクルーシブなコンサートです。
+              </p>
+
+              <p>
+                ジャンルの垣根はありません。
+                主役も脇役もありません。
+                ステージの上では、すべてのアーティストが対等に、
+                それぞれの音楽を奏でます。
+              </p>
+
+              <p>
+                ミュージカル、ポップス、タンゴ、ブルース——
+                さまざまなジャンルのアーティストたちが、
+                ひとつのステージで共演する。
+                それは、音楽の本質的な姿だと私たちは考えています。
+              </p>
+
+              <p>
+                音楽は、聴く人を選びません。
+                <br />
+                音楽は、演奏する人を選びません。
+                <br />
+                音楽は、最初からずっと、インクルーシブなのです。
+              </p>
+
+              <p>
+                私たちは、この逗子から、
+                誰もが楽しめる音楽の形を発信していきます。
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* About Section */}
-        <section className="relative h-screen flex items-start justify-start pt-32 md:pt-44">
+        <section className="relative h-screen flex items-end justify-start pb-24 md:pb-32">
           {/* Background */}
           <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            className="absolute inset-0 bg-cover bg-top bg-no-repeat"
             style={{
               backgroundImage: `url(/images/statement.jpg)`,
             }}
@@ -87,75 +134,33 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Event Info Section */}
+        {/* Ticket Section */}
         <section className="py-24 md:py-32 px-6 bg-white/5">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-medium text-center mb-16">
-              EVENT INFO
+          <div className="max-w-md mx-auto">
+            <h2 className="text-2xl md:text-3xl font-medium text-center mb-12">
+              チケット料金
             </h2>
-
-            <div className="grid md:grid-cols-2 gap-12">
-              {/* Date & Venue */}
-              <div className="space-y-8">
-                <div>
-                  <h3 className="text-sm text-white/50 mb-2">日時</h3>
-                  <p className="text-lg">{formattedDate}</p>
-                  <p className="text-white/70">
-                    開場 {event.doorTime} / 開演 {event.startTime}
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-sm text-white/50 mb-2">会場</h3>
-                  <p className="text-lg">{event.venue}</p>
-                  <p className="text-white/70">{event.address}</p>
-                  <p className="text-sm text-white/50 mt-1">
-                    {event.capacity}席（車椅子席あり）
-                  </p>
-                </div>
-              </div>
-
-              {/* Tickets */}
-              <div>
-                <h3 className="text-sm text-white/50 mb-4">チケット料金</h3>
-                <ul className="space-y-3">
-                  {event.prices.map((price) => (
-                    <li
-                      key={price.label}
-                      className="flex items-baseline justify-between border-b border-white/10 pb-3"
-                    >
-                      <span className="text-white/80">{price.label}</span>
-                      <div className="text-right">
-                        <span className="text-lg">
-                          {price.price === 0
-                            ? "無料"
-                            : `¥${price.price.toLocaleString()}`}
-                        </span>
-                        {price.note && (
-                          <span className="block text-xs text-white/50">
-                            {price.note}
-                          </span>
-                        )}
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-
-                {event.ticketUrl ? (
-                  <a
-                    href={event.ticketUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block mt-8 px-8 py-3 bg-primary text-black font-medium hover:bg-primary-dark transition-colors"
-                  >
-                    チケットを購入する
-                  </a>
-                ) : (
-                  <p className="mt-8 text-white/50">
-                    チケット情報は近日公開予定
-                  </p>
-                )}
-              </div>
+            <ul className="space-y-3 mb-8">
+              <li className="flex items-baseline justify-between border-b border-white/10 pb-3">
+                <span className="text-white/80">一般</span>
+                <span className="text-lg">¥5,000</span>
+              </li>
+              <li className="flex items-baseline justify-between border-b border-white/10 pb-3">
+                <span className="text-white/80">中高生</span>
+                <span className="text-lg">¥3,500</span>
+              </li>
+              <li className="flex items-baseline justify-between border-b border-white/10 pb-3">
+                <span className="text-white/80">障がい者手帳保持者および介助者</span>
+                <span className="text-lg">¥3,000</span>
+              </li>
+              <li className="flex items-baseline justify-between border-b border-white/10 pb-3">
+                <span className="text-white/80">小学生</span>
+                <span className="text-lg">¥2,500</span>
+              </li>
+            </ul>
+            <div className="text-center text-white/70 space-y-1">
+              <p>チケットぴあ/イープラスにて発売予定</p>
+              <p>一般発売予定日：2026年1月24日（一部先行あり）</p>
             </div>
           </div>
         </section>
