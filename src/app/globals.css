@@ -22,6 +22,7 @@ body {
   background: var(--color-background);
   color: var(--color-foreground);
   font-family: var(--font-sans), "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-size: 18px;
   line-height: 1.8;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
