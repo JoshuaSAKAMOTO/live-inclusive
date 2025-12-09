@@ -27,12 +27,15 @@ export default function Home() {
           aria-label="メインビジュアル"
         >
           {/* Background */}
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: `url(${siteConfig.heroImage})`,
-            }}
-          >
+          <div className="absolute inset-0">
+            <Image
+              src={siteConfig.heroImage}
+              alt=""
+              fill
+              priority
+              className="object-cover object-center"
+              sizes="100vw"
+            />
             <div className="absolute inset-0 bg-black/40" />
           </div>
 
@@ -111,12 +114,14 @@ export default function Home() {
         {/* About Section */}
         <section className="relative h-screen flex items-end justify-start pb-24 md:pb-32">
           {/* Background */}
-          <div
-            className="absolute inset-0 bg-cover bg-top bg-no-repeat"
-            style={{
-              backgroundImage: `url(/images/statement.jpg)`,
-            }}
-          >
+          <div className="absolute inset-0">
+            <Image
+              src="/images/statement.jpg"
+              alt=""
+              fill
+              className="object-cover object-top"
+              sizes="100vw"
+            />
             <div className="absolute inset-0 bg-black/40" />
           </div>
 
@@ -209,9 +214,11 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="block hover:opacity-90 transition-opacity"
               >
-                <img
+                <Image
                   src="/images/campfire.png"
                   alt="クラウドファンディング - ネクストゴール60万円に挑戦中"
+                  width={1200}
+                  height={800}
                   className="w-full h-auto rounded-lg"
                 />
               </a>
