@@ -11,7 +11,7 @@ export const event: Event = {
   prices: [
     { label: "一般", price: 5000 },
     { label: "中高生", price: 3500 },
-    { label: "障がい者手帳保持者および同伴者", price: 3000 },
+    { label: "障がい者手帳保持者および付添1名", price: 3000 },
     { label: "小学生", price: 2500 },
   ],
   ticketUrl: undefined,
