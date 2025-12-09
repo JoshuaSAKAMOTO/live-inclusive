@@ -62,19 +62,19 @@ export function Footer() {
             <h3 className="text-sm font-medium mb-4 text-white/80">CONTACT</h3>
             <div className="space-y-2 text-sm text-white/60">
               <p>
+                <Link
+                  href="/contact"
+                  className="hover:text-white transition-colors"
+                >
+                  お問い合わせフォーム
+                </Link>
+              </p>
+              <p>
                 <a
                   href={`tel:${siteConfig.contactPhone}`}
                   className="hover:text-white transition-colors"
                 >
                   {siteConfig.contactPhone}
-                </a>
-              </p>
-              <p>
-                <a
-                  href={`mailto:${siteConfig.contactEmail}`}
-                  className="hover:text-white transition-colors"
-                >
-                  {siteConfig.contactEmail}
                 </a>
               </p>
             </div>
