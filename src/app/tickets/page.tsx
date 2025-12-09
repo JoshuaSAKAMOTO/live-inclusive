@@ -81,6 +81,7 @@ export default function TicketsPage() {
                 </div>
               ))}
             </div>
+            <p className="mt-4 text-sm text-white/50 text-right">※価格は税込</p>
           </section>
 
           {/* Purchase Button */}
@@ -108,9 +109,9 @@ export default function TicketsPage() {
           <section className="mt-16">
             <h2 className="text-lg font-medium mb-4">ご注意</h2>
             <ul className="space-y-2 text-sm text-white/60">
+              <li>・未就学児のご入場はご遠慮いただいております</li>
               <li>・車椅子席をご希望の方は事前にお問い合わせください</li>
-              <li>・未就学児は膝上鑑賞に限り無料です</li>
-              <li>・障がい者チケットは付添1名まで無料でご入場いただけます</li>
+              <li>・チケット代行業者をご利用の場合、別途手数料が発生します</li>
               <li>・チケットの転売は固くお断りいたします</li>
             </ul>
           </section>

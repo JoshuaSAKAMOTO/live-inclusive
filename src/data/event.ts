@@ -9,10 +9,10 @@ export const event: Event = {
   address: "神奈川県逗子市逗子4-2-10",
   capacity: 555,
   prices: [
-    { label: "一般", price: 5500 },
-    { label: "高校生以下", price: 3000 },
-    { label: "障がい者", price: 3000, note: "付添1名無料" },
-    { label: "未就学児", price: 0, note: "膝上無料" },
+    { label: "一般", price: 5000 },
+    { label: "中高生", price: 3500 },
+    { label: "障がい者手帳保持者および同伴者", price: 3000 },
+    { label: "小学生", price: 2500 },
   ],
   ticketUrl: undefined,
 };
