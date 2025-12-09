@@ -12,15 +12,25 @@ interface ArchiveItem {
   description: string;
   thumbnail?: string;
   videoUrl?: string;
+  articleUrl?: string;
 }
 
 const archives: ArchiveItem[] = [
+  {
+    year: 2025,
+    title: "逗子ライブインクルーシブ 2025",
+    description:
+      "2回目の開催となった2025年公演。さらに多くのアーティストが参加し、感動のステージをお届けしました。",
+    thumbnail: "/images/hero.jpg",
+    articleUrl: "https://shonanjin.com/news/live-inclusive-2025/",
+  },
   {
     year: 2024,
     title: "逗子ライブインクルーシブ 2024",
     description:
       "初開催となった2024年公演。多くの観客に感動をお届けしました。",
     thumbnail: "/images/archive/2024.jpg",
+    articleUrl: "https://shonanjin.com/news/live-inclusive-2024/",
   },
 ];
 
@@ -97,9 +107,19 @@ export default function ArchivePage() {
                     <h2 className="text-2xl font-medium mb-4">
                       {archive.title}
                     </h2>
-                    <p className="text-white/70 leading-relaxed">
+                    <p className="text-white/70 leading-relaxed mb-4">
                       {archive.description}
                     </p>
+                    {archive.articleUrl && (
+                      <a
+                        href={archive.articleUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block text-sm text-white/60 hover:text-white transition-colors underline underline-offset-4"
+                      >
+                        記事を読む →
+                      </a>
+                    )}
                   </div>
                 </article>
               ))}
