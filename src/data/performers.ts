@@ -9,6 +9,7 @@ export const performers: Performer[] = [
     profile:
       "LIVE INCLUSIVEのコンセプトに賛同し、初回から続けて出演する、いまやこのコンサートの代名詞的存在。「レ・ミゼラブル」や「サウンド・オブ・ミュージック」などのミュージカルや、ディズニーアニメ「アラジン」のジャスミン役など、俳優・声優として幅広く活躍。",
     thumbnail: "/images/performers/kaoriasoh.png",
+    thumbnailPosition: "top",
     photo: "/images/performers/kaoriasoh.png",
     sns: [{ type: "website", url: "https://www.amuse.co.jp/artist/A0092/index.html" }],
   },
@@ -31,6 +32,7 @@ export const performers: Performer[] = [
     profile:
       "6歳で子役デビューし、「渡る世間は鬼ばかり」「レ・ミゼラブル」など舞台やコンサートで幅広く活躍。中でも歌唱力には特に定評があり、ディズニーアニメ「塔の上のラプンツェル」では主人公ラプンツェルの歌唱を担当。",
     thumbnail: "/images/performers/mariokonogi.png",
+    thumbnailPosition: "top",
     photo: "/images/performers/mariokonogi.png",
     sns: [{ type: "instagram", url: "https://www.instagram.com/mariokonogi/" }],
   },
@@ -75,6 +77,7 @@ export const performers: Performer[] = [
     profile:
       "NHK名古屋放送児童劇団を経て、ドラマ「中学生群像」でデビュー。77年、劇団「薔薇座」に入団し、89年まで看板女優として活躍。以後、三谷幸喜作品に数多く出演するほか、テレビドラマ、映画に出演。日本アカデミー賞最優秀助演女優賞受賞。声優としては、「それいけ！アンパンマン」のアンパンマン役、「キャッツ・アイ」瞳役、そしてまた多くの洋画吹替を務める。",
     thumbnail: "/images/performers/keikotoda.png",
+    thumbnailPosition: "top",
     photo: "/images/performers/keikotoda.png",
     sns: [{ type: "website", url: "https://ameblo.jp/toda-keiko/" }],
   },

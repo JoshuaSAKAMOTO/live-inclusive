@@ -156,7 +156,7 @@ export default function Home() {
                       src={performer.thumbnail}
                       alt={performer.name}
                       fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      className={`object-cover transition-transform duration-300 group-hover:scale-105 ${performer.thumbnailPosition === "top" ? "object-top" : ""}`}
                     />
                   </div>
                   <h3 className="text-sm md:text-base font-medium group-hover:text-white/80 transition-colors">
