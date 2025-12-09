@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig, navItems } from "@/data/site";
 import { SocialLinks } from "./social-links";
 
@@ -30,9 +31,11 @@ export function Footer() {
                 神奈川県マグカル展開促進助成
               </p>
             </div>
-            <img
+            <Image
               src="/images/mag-cul.jpg"
               alt="神奈川文化プログラム マグカル"
+              width={128}
+              height={128}
               className="h-32 w-auto"
             />
           </div>
@@ -82,7 +85,7 @@ export function Footer() {
         </div>
 
         <div className="mt-16 pt-8 border-t border-white/10 text-center">
-          <p className="text-xs text-white/40">
+          <p className="text-xs text-white/60">
             &copy; {new Date().getFullYear()} {siteConfig.name}. All rights
             reserved.
           </p>
