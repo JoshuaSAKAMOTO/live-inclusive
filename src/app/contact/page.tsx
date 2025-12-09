@@ -23,11 +23,20 @@ export default function ContactPage() {
             <p className="text-white/60">お問い合わせ</p>
           </div>
 
-          {/* Contact Info */}
+          {/* Contact Form */}
           <section className="mb-16">
-            <div className="bg-white/5 p-8 md:p-12 space-y-8">
+            <ContactForm />
+
+            <p className="mt-6 text-sm text-white/50">
+              ※お問い合わせの内容によっては、返信にお時間をいただく場合がございます。
+            </p>
+          </section>
+
+          {/* Contact Info */}
+          <section>
+            <div className="bg-white/5 p-8 md:p-12">
               <div>
-                <h2 className="text-sm text-white/50 mb-2">お電話</h2>
+                <h2 className="text-sm text-white/50 mb-2">お電話でのお問い合わせ</h2>
                 <a
                   href={`tel:${siteConfig.contactPhone}`}
                   className="text-2xl hover:text-primary transition-colors"
@@ -35,30 +44,7 @@ export default function ContactPage() {
                   {siteConfig.contactPhone}
                 </a>
               </div>
-
-              <div>
-                <h2 className="text-sm text-white/50 mb-2">メール</h2>
-                <a
-                  href={`mailto:${siteConfig.contactEmail}`}
-                  className="text-lg hover:text-primary transition-colors break-all"
-                >
-                  {siteConfig.contactEmail}
-                </a>
-              </div>
             </div>
-          </section>
-
-          {/* Contact Form */}
-          <section>
-            <h2 className="text-xl font-medium mb-8">
-              お問い合わせフォーム
-            </h2>
-
-            <ContactForm />
-
-            <p className="mt-6 text-sm text-white/50">
-              ※お問い合わせの内容によっては、返信にお時間をいただく場合がございます。
-            </p>
           </section>
         </div>
       </main>
