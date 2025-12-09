@@ -5,6 +5,7 @@ export interface Performer {
   role: string;
   profile: string;
   thumbnail: string;
+  thumbnailPosition?: "top" | "center";
   photo: string;
   sns?: {
     type: "twitter" | "x" | "instagram" | "facebook" | "youtube" | "website";
