@@ -30,7 +30,7 @@ export default function Home() {
           <div className="absolute inset-0">
             <Image
               src={siteConfig.heroImage}
-              alt=""
+              alt="ライブインクルーシブ2025フィナーレの画像。グリーンのTシャツを着たバンドメンバー含めた16人が舞台に横に並ぶ"
               fill
               priority
               className="object-cover object-center"
@@ -117,7 +117,7 @@ export default function Home() {
           <div className="absolute inset-0">
             <Image
               src="/images/statement.jpg"
-              alt=""
+              alt="A Whole New Worldを手話で表現する　石井一孝さん　麻生かほ里さん"
               fill
               className="object-cover object-top"
               sizes="100vw"
@@ -157,10 +157,10 @@ export default function Home() {
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
-                  <h3 className="text-xs md:text-sm font-medium group-hover:text-white/80 transition-colors">
+                  <h3 className="text-sm md:text-base font-medium group-hover:text-white/80 transition-colors">
                     {performer.name}
                   </h3>
-                  <p className="text-xs text-white/50">{performer.role}</p>
+                  <p className="text-sm text-white/50">{performer.role}</p>
                 </Link>
               ))}
             </div>
@@ -183,7 +183,7 @@ export default function Home() {
                 <span className="text-lg">¥3,500</span>
               </li>
               <li className="flex items-baseline justify-between border-b border-white/10 pb-3">
-                <span className="text-white/80">障がい者手帳保持者および同伴者</span>
+                <span className="text-white/80">障がい者手帳保持者および付添1名</span>
                 <span className="text-lg">¥3,000</span>
               </li>
               <li className="flex items-baseline justify-between border-b border-white/10 pb-3">
@@ -216,7 +216,7 @@ export default function Home() {
               >
                 <Image
                   src="/images/campfire.png"
-                  alt="クラウドファンディング - ネクストゴール60万円に挑戦中"
+                  alt="ZUSHI LIVE INCLUSIVE 2026 クラウドファンディング実施中。たくさんのご支援ありがとうございます。現在、ネクストゴール60万円に挑戦中！音楽の軌跡に逗子でまた会える。"
                   width={1200}
                   height={800}
                   className="w-full h-auto rounded-lg"
