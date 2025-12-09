@@ -3,6 +3,7 @@ import { siteConfig } from "@/data/site";
 import { event } from "@/data/event";
 import { performers } from "@/data/performers";
 import { InstagramEmbed } from "@/components/instagram-embed";
+import { NewsSection } from "@/components/news-section";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -191,6 +192,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* News Section */}
+        <NewsSection />
 
         {/* CTA Section */}
         {siteConfig.crowdfundingUrl && (

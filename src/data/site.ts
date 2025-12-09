@@ -18,6 +18,7 @@ export const siteConfig: SiteConfig = {
 
 export const navItems: NavItem[] = [
   { label: "HOME", href: "/" },
+  { label: "NEWS", href: "/news" },
   { label: "PERFORMERS", href: "/performers" },
   { label: "TICKETS", href: "/tickets" },
   { label: "LOCATION", href: "/venue" },
