@@ -1,4 +1,5 @@
 import { Header, Footer } from "@/components/layout";
+import { ContactForm } from "@/components/contact-form";
 import { siteConfig } from "@/data/site";
 import type { Metadata } from "next";
 
@@ -53,101 +54,7 @@ export default function ContactPage() {
               お問い合わせフォーム
             </h2>
 
-            <form className="space-y-6">
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm text-white/70 mb-2"
-                >
-                  お名前 <span className="text-primary">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  className="w-full px-4 py-3 bg-white/5 border border-white/20 focus:border-primary focus:outline-none transition-colors"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm text-white/70 mb-2"
-                >
-                  メールアドレス <span className="text-primary">*</span>
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  className="w-full px-4 py-3 bg-white/5 border border-white/20 focus:border-primary focus:outline-none transition-colors"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="phone"
-                  className="block text-sm text-white/70 mb-2"
-                >
-                  お電話番号
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  className="w-full px-4 py-3 bg-white/5 border border-white/20 focus:border-primary focus:outline-none transition-colors"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="category"
-                  className="block text-sm text-white/70 mb-2"
-                >
-                  お問い合わせ種別 <span className="text-primary">*</span>
-                </label>
-                <select
-                  id="category"
-                  name="category"
-                  required
-                  className="w-full px-4 py-3 bg-white/5 border border-white/20 focus:border-primary focus:outline-none transition-colors"
-                >
-                  <option value="">選択してください</option>
-                  <option value="ticket">チケットについて</option>
-                  <option value="wheelchair">車椅子席について</option>
-                  <option value="sponsorship">協賛・後援について</option>
-                  <option value="media">取材・メディアについて</option>
-                  <option value="other">その他</option>
-                </select>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm text-white/70 mb-2"
-                >
-                  お問い合わせ内容 <span className="text-primary">*</span>
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={6}
-                  required
-                  className="w-full px-4 py-3 bg-white/5 border border-white/20 focus:border-primary focus:outline-none transition-colors resize-none"
-                />
-              </div>
-
-              <div className="pt-4">
-                <button
-                  type="submit"
-                  className="w-full px-8 py-4 bg-primary text-black font-medium hover:bg-primary-dark transition-colors"
-                >
-                  送信する
-                </button>
-              </div>
-            </form>
+            <ContactForm />
 
             <p className="mt-6 text-sm text-white/50">
               ※お問い合わせの内容によっては、返信にお時間をいただく場合がございます。
