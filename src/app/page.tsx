@@ -32,7 +32,7 @@ export default function Home() {
               backgroundImage: `url(${siteConfig.heroImage})`,
             }}
           >
-            <div className="absolute inset-0 bg-black/60" />
+            <div className="absolute inset-0 bg-black/40" />
           </div>
 
           {/* Content */}
@@ -77,24 +77,15 @@ export default function Home() {
 
             <div className="space-y-6 text-white/80 leading-relaxed">
               <p>
-                海と山に囲まれた、穏やかな空気が流れる逗子。
-                この地で、誰もが楽しめる音楽コンサートを開催します。
+                2024年に産声を上げた「逗子ライブインクルーシブ」は、さまざまな背景を持つアーティストが結集し、共演する、これまでにないコンセプトのコンサートです。
               </p>
 
               <p>
-                「逗子ライブインクルーシブ」は、障がい者アーティストと
-                トップアーティストが共演するインクルーシブなコンサートです。
+                ジャンルの垣根はありません。ステージの上では、主役も脇役もなく、すべてのアーティストが対等に、それぞれの音楽を奏でます。そしてそれがシナジーを生み、大きな感動へとつながっていくのです。
               </p>
 
               <p>
-                ジャンルの垣根はありません。
-                主役も脇役もありません。
-                ステージの上では、すべてのアーティストが対等に、
-                それぞれの音楽を奏でます。
-              </p>
-
-              <p>
-                ミュージカル、ポップス、タンゴ、ブルース——
+                ミュージカル、ポップス、ジャズ、ロック——
                 さまざまなジャンルのアーティストたちが、
                 ひとつのステージで共演する。
                 それは、音楽の本質的な姿だと私たちは考えています。
@@ -130,10 +121,11 @@ export default function Home() {
 
           {/* Content */}
           <div className="relative z-10 text-left px-8 md:px-16">
+            <p className="text-white font-bold text-2xl md:text-3xl mb-4">
+              これは、聴くだけではない、コンサート。
+            </p>
             <p className="text-white/90 leading-relaxed text-lg md:text-xl">
-              障がい者アーティストとトップアーティストが共演する、インクルーシブなコンサート。
-              <br />
-              ジャンルも、主役も、境界線もない。誰もが楽しめる音楽コンサートを、逗子から。
+              手話パフォーマンスやLED字幕を活用して、「音」が届きにくい方にも楽しんでいただけるよう、さまざまな工夫にトライしています。
             </p>
           </div>
         </section>
@@ -144,7 +136,7 @@ export default function Home() {
             <h2 className="text-2xl md:text-3xl font-medium text-center mb-16">
               PERFORMERS
             </h2>
-            <div className="grid grid-cols-3 md:grid-cols-6 gap-4 md:gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
               {performers.map((performer) => (
                 <Link
                   key={performer.id}
@@ -203,6 +195,9 @@ export default function Home() {
         {/* CTA Section */}
         {siteConfig.crowdfundingUrl && (
           <section className="py-24 md:py-32 px-6 text-center">
+            <h2 className="text-2xl md:text-3xl font-medium text-center mb-12">
+              CLOUD FUNDING
+            </h2>
             <div className="max-w-4xl mx-auto mb-8">
               <a
                 href={siteConfig.crowdfundingUrl}
