@@ -8,7 +8,7 @@
 │  ┌────────────────────────────────────────────────────────┐ │
 │  │                    Next.js App                          │ │
 │  │  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌───────────┐  │ │
-│  │  │  Pages   │ │Components│ │   Lib    │ │   Types   │  │ │
+│  │  │  Pages   │ │Components│ │   Lib    │ │   Data    │  │ │
 │  │  └────┬─────┘ └──────────┘ └────┬─────┘ └───────────┘  │ │
 │  │       │                         │                       │ │
 │  │       ▼                         ▼                       │ │
@@ -19,14 +19,22 @@
 │  │  └──────────────────────────────────────────────────┘  │ │
 │  └────────────────────────────────────────────────────────┘ │
 └─────────────────────────────────────────────────────────────┘
-                              │
-                              ▼
-┌─────────────────────────────────────────────────────────────┐
-│                        microCMS                              │
-│  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌───────────────┐   │
-│  │Performers│ │  Events  │ │   News   │ │    Archive    │   │
-│  └──────────┘ └──────────┘ └──────────┘ └───────────────┘   │
-└─────────────────────────────────────────────────────────────┘
+         │                                      │
+         ▼                                      ▼
+┌─────────────────────┐              ┌─────────────────────────┐
+│     MicroCMS        │              │  Cloudflare Workers     │
+│  ┌───────────────┐  │              │  ┌───────────────────┐  │
+│  │     News      │  │              │  │  Contact API      │  │
+│  │ (お知らせ)    │  │              │  │  (Hono.js)        │  │
+│  └───────────────┘  │              │  └─────────┬─────────┘  │
+└─────────────────────┘              └────────────┼────────────┘
+                                                  │
+                                     ┌────────────┴────────────┐
+                                     ▼                         ▼
+                              ┌───────────┐            ┌───────────┐
+                              │  Resend   │            │   LINE    │
+                              │  (Email)  │            │   API     │
+                              └───────────┘            └───────────┘
 ```
 
 ## 2. ディレクトリ構成
@@ -47,63 +55,48 @@ live-inclusive/
 │   │   │   └── page.tsx        # 会場情報
 │   │   ├── archive/
 │   │   │   └── page.tsx        # 過去公演
-│   │   ├── about/
-│   │   │   └── page.tsx        # About
+│   │   ├── news/
+│   │   │   ├── page.tsx        # ニュース一覧
+│   │   │   └── [id]/
+│   │   │       └── page.tsx    # ニュース詳細
 │   │   └── contact/
 │   │       └── page.tsx        # お問い合わせ
 │   │
 │   ├── components/
-│   │   ├── ui/                 # 基本UIコンポーネント
-│   │   │   ├── button.tsx
-│   │   │   ├── card.tsx
-│   │   │   ├── input.tsx
-│   │   │   └── ...
 │   │   ├── layout/             # レイアウトコンポーネント
+│   │   │   ├── index.ts
 │   │   │   ├── header.tsx
 │   │   │   ├── footer.tsx
-│   │   │   ├── navigation.tsx
-│   │   │   └── mobile-menu.tsx
-│   │   ├── sections/           # ページセクション
-│   │   │   ├── hero.tsx
-│   │   │   ├── event-info.tsx
-│   │   │   ├── performer-card.tsx
-│   │   │   └── ...
-│   │   └── common/             # 共通コンポーネント
-│   │       ├── seo.tsx
-│   │       ├── social-links.tsx
-│   │       └── ...
+│   │   │   └── social-links.tsx
+│   │   ├── news-section.tsx    # トップページNEWSセクション
+│   │   └── instagram-embed.tsx # Instagram埋め込み
 │   │
 │   ├── lib/
-│   │   ├── microcms/           # microCMS関連
-│   │   │   ├── client.ts       # APIクライアント
-│   │   │   └── queries.ts      # クエリ関数
-│   │   ├── utils.ts            # ユーティリティ
-│   │   └── constants.ts        # 定数
+│   │   └── microcms.ts         # MicroCMS APIクライアント
 │   │
-│   ├── types/
-│   │   ├── performer.ts        # 出演者型定義
-│   │   ├── event.ts            # イベント型定義
-│   │   └── ...
-│   │
-│   └── styles/
-│       └── globals.css         # グローバルスタイル
+│   └── data/                   # 静的データ
+│       ├── site.ts             # サイト設定
+│       ├── event.ts            # イベント情報
+│       ├── performers.ts       # 出演者情報
+│       └── archive.ts          # 過去公演
 │
 ├── public/
-│   ├── images/
-│   ├── fonts/
-│   └── favicon.ico
+│   └── images/                 # 画像ファイル
 │
 ├── docs/                       # ドキュメント
 │   ├── requirements.md
-│   └── technical-design.md
+│   ├── technical-design.md
+│   └── microcms-guide.md       # MicroCMS操作ガイド
+│
+├── .github/
+│   └── pull_request_template.md
 │
 ├── .env.local                  # 環境変数（ローカル）
 ├── .env.example                # 環境変数サンプル
 ├── next.config.ts
 ├── tailwind.config.ts
 ├── tsconfig.json
-├── package.json
-└── README.md
+└── package.json
 ```
 
 ## 3. データフロー
@@ -165,19 +158,19 @@ interface EventInfoSectionProps {
 }
 ```
 
-## 5. microCMSスキーマ設計
+## 5. MicroCMSスキーマ設計
 
-> **注意**: microCMSは「お知らせ（news）」のみで使用。
+> **注意**: MicroCMSは「お知らせ（news）」のみで使用。
 > 出演者・イベント情報などはコード内で管理（`src/data/`）。
 
-### 5.1 news（お知らせ）- microCMS管理
+### 5.1 news（お知らせ）- MicroCMS管理
 
 | フィールド | 型 | 説明 |
 |------------|-----|------|
 | title | テキスト | タイトル |
+| date | 日付 | 公開日 |
 | content | リッチエディタ | 本文 |
-| category | セレクト | カテゴリ |
-| publishedAt | 日時 | 公開日 |
+| category | 複数選択 | カテゴリ（お知らせ / メディア） |
 
 ### 5.2 コード管理データ（`src/data/`）
 
@@ -185,49 +178,71 @@ interface EventInfoSectionProps {
 - `performers.ts` - 出演者情報
 - `event.ts` - イベント情報
 - `site.ts` - サイト設定
+- `archive.ts` - 過去公演情報
 
 ## 6. API設計
 
-### 6.1 microCMS クライアント
+### 6.1 MicroCMS クライアント
 
 ```typescript
-// lib/microcms/client.ts
-import { createClient } from 'microcms-js-sdk';
+// lib/microcms.ts
+import { createClient } from "microcms-js-sdk";
+import type { MicroCMSListContent, MicroCMSQueries } from "microcms-js-sdk";
 
 export const client = createClient({
-  serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN!,
-  apiKey: process.env.MICROCMS_API_KEY!,
+  serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN || "",
+  apiKey: process.env.MICROCMS_API_KEY || "",
 });
+
+export type News = {
+  title: string;
+  date: string;
+  content: string;
+  category?: ("お知らせ" | "メディア")[];
+} & MicroCMSListContent;
+
+// ニュース一覧取得
+export async function getNewsList(queries?: MicroCMSQueries) {
+  return await client.getList<News>({
+    endpoint: "news",
+    queries: { orders: "-date", ...queries },
+  });
+}
+
+// ニュース詳細取得
+export async function getNewsDetail(contentId: string, queries?: MicroCMSQueries) {
+  return await client.getListDetail<News>({
+    endpoint: "news",
+    contentId,
+    queries,
+  });
+}
 ```
 
-### 6.2 データ取得関数
+### 6.2 お問い合わせAPI（Cloudflare Workers）
 
 ```typescript
-// lib/microcms/queries.ts
+// 別リポジトリ: live-inclusive-api
+// POST /api/contact
 
-// 出演者一覧取得
-export async function getPerformers() {
-  return await client.getList<Performer>({
-    endpoint: 'performers',
-    queries: { orders: 'order' },
-  });
+// リクエスト
+{
+  name: string;
+  email: string;
+  category: string;
+  message: string;
 }
 
-// 出演者詳細取得
-export async function getPerformer(id: string) {
-  return await client.get<Performer>({
-    endpoint: 'performers',
-    contentId: id,
-  });
-}
-
-// イベント情報取得
-export async function getEvent() {
-  return await client.getObject<Event>({
-    endpoint: 'event',
-  });
+// レスポンス
+{
+  success: boolean;
+  message: string;
 }
 ```
+
+通知先:
+- メール: Resend経由で管理者へ送信
+- LINE: LINE Messaging API経由でグループに通知
 
 ## 7. スタイリング設計
 
@@ -402,12 +417,16 @@ const notoSans = Noto_Sans_JP({
 ### 11.1 環境変数
 
 ```env
-# .env.local
+# .env.local（フロントエンド）
 MICROCMS_SERVICE_DOMAIN=xxxxx
 MICROCMS_API_KEY=xxxxx
+NEXT_PUBLIC_CONTACT_API_URL=https://api.zushiliveinclusive.com
 
-# フォーム送信用（任意）
+# Cloudflare Workers（live-inclusive-api）
 RESEND_API_KEY=xxxxx
+LINE_CHANNEL_ACCESS_TOKEN=xxxxx
+LINE_GROUP_ID=xxxxx
+CONTACT_NOTIFICATION_EMAIL=xxxxx
 ```
 
 ### 11.2 CSP設定
@@ -439,12 +458,22 @@ const securityHeaders = [
 
 | 変数名 | 環境 | 説明 |
 |--------|------|------|
-| MICROCMS_SERVICE_DOMAIN | Production/Preview | microCMSドメイン |
-| MICROCMS_API_KEY | Production/Preview | microCMS APIキー |
+| MICROCMS_SERVICE_DOMAIN | Production/Preview | MicroCMSドメイン |
+| MICROCMS_API_KEY | Production/Preview | MicroCMS APIキー |
+| NEXT_PUBLIC_CONTACT_API_URL | Production/Preview | お問い合わせAPI URL |
 
-### 12.3 Webhook設定
+### 12.3 環境変数（Cloudflare Workers）
 
-microCMSのコンテンツ更新時にVercelで再ビルドをトリガー
+| 変数名 | 説明 |
+|--------|------|
+| RESEND_API_KEY | Resend APIキー |
+| LINE_CHANNEL_ACCESS_TOKEN | LINE Messaging API トークン |
+| LINE_GROUP_ID | LINE通知先グループID |
+| CONTACT_NOTIFICATION_EMAIL | 通知先メールアドレス |
+
+### 12.4 Webhook設定
+
+MicroCMSのコンテンツ更新時にVercelで再ビルドをトリガー（任意）
 
 ---
 
@@ -453,3 +482,4 @@ microCMSのコンテンツ更新時にVercelで再ビルドをトリガー
 | 日付 | バージョン | 変更内容 |
 |------|------------|----------|
 | 2024-12-04 | 1.0 | 初版作成 |
+| 2024-12-09 | 1.1 | 実装内容を反映（MicroCMS、Cloudflare Workers、お問い合わせAPI） |

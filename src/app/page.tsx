@@ -183,7 +183,7 @@ export default function Home() {
                 <span className="text-lg">¥3,500</span>
               </li>
               <li className="flex items-baseline justify-between border-b border-white/10 pb-3">
-                <span className="text-white/80">障がい者手帳保持者および介助者</span>
+                <span className="text-white/80">障がい者手帳保持者および同伴者</span>
                 <span className="text-lg">¥3,000</span>
               </li>
               <li className="flex items-baseline justify-between border-b border-white/10 pb-3">
