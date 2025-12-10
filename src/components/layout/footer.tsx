@@ -12,19 +12,28 @@ export function Footer() {
           <div>
             <div className="text-sm text-white/60 leading-relaxed space-y-2 mb-6">
               <p>
+                <span className="text-white/80">逗子ライブインクルーシブ実行委員長</span>
+                <br />
+                宮澤 久美
+              </p>
+              <p>
                 <span className="text-white/80">主催：</span>
                 逗子ライブインクルーシブ実行委員会/逗子文化プラザ市民交流センター
               </p>
               <p>
+                <span className="text-white/80">企画：</span>
+                スークス株式会社
+              </p>
+              <p>
                 <span className="text-white/80">共催：</span>
-                逗子文化プラザホール/逗子市
+                逗子文化プラザホール(指定管理者:逗子文化プラザパートナーズ)/逗子市
               </p>
               <p>
                 <span className="text-white/80">後援：</span>
                 逗子市教育委員会/逗子市社会福祉協議会/神奈川県
                 <br />
                 <span className="text-white/80 invisible">後援：</span>
-                鎌倉市（予定）/横須賀市/葉山町（予定）
+                鎌倉市（予定）/横須賀市/藤沢市（予定）/葉山町（予定）
               </p>
               <p>
                 <span className="text-white/80">助成：</span>
@@ -60,7 +69,7 @@ export function Footer() {
           {/* Contact */}
           <div>
             <h3 className="text-sm font-medium mb-4 text-white/80">CONTACT</h3>
-            <div className="space-y-2 text-sm text-white/60">
+            <div className="text-sm text-white/60">
               <p>
                 <Link
                   href="/contact"
@@ -68,14 +77,6 @@ export function Footer() {
                 >
                   お問い合わせフォーム
                 </Link>
-              </p>
-              <p>
-                <a
-                  href={`tel:${siteConfig.contactPhone}`}
-                  className="hover:text-white transition-colors"
-                >
-                  {siteConfig.contactPhone}
-                </a>
               </p>
             </div>
             <div className="mt-6">
