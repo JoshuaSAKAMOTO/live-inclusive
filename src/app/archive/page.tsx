@@ -29,7 +29,7 @@ const archives: ArchiveItem[] = [
     title: "逗子ライブインクルーシブ 2024",
     description:
       "初開催となった2024年公演。多くの観客に感動をお届けしました。",
-    thumbnail: "/images/archive/2024.jpg",
+    thumbnail: "/images/2024.jpeg",
     articleUrl: "https://shonanjin.com/news/live-inclusive-2024/",
   },
 ];
