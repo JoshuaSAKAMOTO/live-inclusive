@@ -39,3 +39,13 @@ export async function getNewsDetail(
   });
   return data;
 }
+
+// ニュース詳細を取得（draftKey対応）
+export async function getNewsPreview(contentId: string, draftKey: string) {
+  const data = await client.getListDetail<News>({
+    endpoint: "news",
+    contentId,
+    queries: { draftKey },
+  });
+  return data;
+}
