@@ -30,7 +30,7 @@ export function Footer() {
               </p>
               <p>
                 <span className="text-white/80">後援：</span>
-                逗子市教育委員会/逗子市社会福祉協議会/神奈川県
+                神奈川県/逗子市教育委員会/逗子市社会福祉協議会
                 <br />
                 <span className="text-white/80 invisible">後援：</span>
                 鎌倉市（予定）/横須賀市/藤沢市（予定）/葉山町（予定）
