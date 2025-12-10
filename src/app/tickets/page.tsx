@@ -99,7 +99,7 @@ export default function TicketsPage() {
               <div className="py-12 bg-white/5 border border-white/10">
                 <p className="text-xl text-white/60 mb-2">Coming Soon</p>
                 <p className="text-white/40">
-                  チケット販売は近日開始予定です
+                  2026年1月24日より、チケットぴあ/イープラスにて販売開始予定
                 </p>
               </div>
             )}
