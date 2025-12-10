@@ -8,6 +8,8 @@ export const metadata: Metadata = {
   description: "逗子ライブインクルーシブの最新ニュース・お知らせ",
 };
 
+const categories = ["すべて", "お知らせ", "メディア"] as const;
+
 function formatDate(dateString: string) {
   const date = new Date(dateString);
   return date.toLocaleDateString("ja-JP", {
@@ -17,8 +19,19 @@ function formatDate(dateString: string) {
   });
 }
 
-export default async function NewsPage() {
+type Props = {
+  searchParams: Promise<{ category?: string }>;
+};
+
+export default async function NewsPage({ searchParams }: Props) {
+  const { category } = await searchParams;
   const { contents: news } = await getNewsList({ limit: 100 });
+
+  // カテゴリでフィルタリング
+  const filteredNews =
+    category && category !== "すべて"
+      ? news.filter((item) => item.category?.includes(category as "お知らせ" | "メディア"))
+      : news;
 
   return (
     <>
@@ -34,10 +47,30 @@ export default async function NewsPage() {
             <p className="text-white/60">ニュース・お知らせ</p>
           </div>
 
+          {/* Category Filter */}
+          <div className="flex flex-wrap justify-center gap-2 mb-12">
+            {categories.map((cat) => {
+              const isActive = cat === "すべて" ? !category || category === "すべて" : category === cat;
+              return (
+                <Link
+                  key={cat}
+                  href={cat === "すべて" ? "/news" : `/news?category=${encodeURIComponent(cat)}`}
+                  className={`px-4 py-2 text-sm border transition-colors ${
+                    isActive
+                      ? "border-primary bg-primary text-black"
+                      : "border-white/30 text-white/70 hover:border-white hover:text-white"
+                  }`}
+                >
+                  {cat}
+                </Link>
+              );
+            })}
+          </div>
+
           {/* News List */}
-          {news.length > 0 ? (
+          {filteredNews.length > 0 ? (
             <ul className="space-y-8">
-              {news.map((item) => (
+              {filteredNews.map((item) => (
                 <li key={item.id}>
                   <Link href={`/news/${item.id}`} className="block group">
                     <article className="border-b border-white/10 pb-8">
@@ -61,7 +94,7 @@ export default async function NewsPage() {
             </ul>
           ) : (
             <p className="text-center text-white/50">
-              現在、ニュースはありません。
+              {category ? `「${category}」のニュースはありません。` : "現在、ニュースはありません。"}
             </p>
           )}
         </div>
