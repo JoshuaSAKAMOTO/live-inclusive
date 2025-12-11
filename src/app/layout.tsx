@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const notoSans = Noto_Sans_JP({
@@ -40,6 +41,7 @@ export default function RootLayout({
     <html lang="ja">
       <body className={`${notoSans.variable} antialiased`}>
         {children}
+        <Analytics />
       </body>
     </html>
   );
