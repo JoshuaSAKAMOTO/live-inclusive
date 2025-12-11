@@ -111,7 +111,7 @@ export default function TicketsPage() {
             <ul className="space-y-2 text-sm text-white/60">
               <li>・未就学児のご入場はご遠慮いただいております</li>
               <li>・車椅子席をご希望の方は事前にお問い合わせください</li>
-              <li>・チケット代行業者をご利用の場合、別途手数料が発生します</li>
+              <li>・チケットの発券時に別途手数料が発生することがあります</li>
               <li>・チケットの転売は固くお断りいたします</li>
             </ul>
           </section>
