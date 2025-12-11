@@ -65,8 +65,8 @@ export const performers: Performer[] = [
     role: "ピアノ",
     profile:
       "アメリカ・ケンタッキー州出身。ピアニスト、作・編曲家として多くの作品を手掛け、３度のグラミー賞受賞に輝く。日本では80年代に「マンハッタン・ジャズ・クインテット/オーケストラのリーダーとして活躍し、その後日本に移住し、現在は八戸を拠点に活躍。生まれつき右手に力が入らず、通常の右手パートを左手で奏でる。",
-    thumbnail: "/images/performers/ソロアー写withピアノ(photo by Takao Ogata) クレジット入り.jpg",
-    photo: "/images/performers/ソロアー写withピアノ(photo by Takao Ogata) クレジット入り.jpg",
+    thumbnail: "/images/performers/david-matthews.jpg",
+    photo: "/images/performers/david-matthews.jpg",
     sns: [{ type: "website", url: "https://www.kingrecords.co.jp/cs/artist/artist.aspx?artist=43740" }],
   },
   {
