@@ -160,7 +160,7 @@ export function ContactForm() {
           onChange={handleChange}
           required
           disabled={status === "submitting"}
-          className="w-full px-4 py-3 bg-white/5 border border-white/20 focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
+          className="w-full px-4 py-3 bg-white/5 border border-white/20 focus:border-primary focus:outline-none transition-colors disabled:opacity-50 [&>option]:bg-neutral-900 [&>option]:text-white"
         >
           <option value="">選択してください</option>
           <option value="ticket">チケットについて</option>

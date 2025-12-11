@@ -23,5 +23,6 @@ export const navItems: NavItem[] = [
   { label: "TICKETS", href: "/tickets" },
   { label: "LOCATION", href: "/venue" },
   { label: "ARCHIVE", href: "/archive" },
+  { label: "ABOUT", href: "/about" },
   { label: "CONTACT", href: "/contact" },
 ];
