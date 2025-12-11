@@ -20,7 +20,7 @@ const archives: ArchiveItem[] = [
     year: 2025,
     title: "逗子ライブインクルーシブ 2025",
     description:
-      "2回目の開催となった2025年公演。さらに多くのアーティストが参加し、感動のステージをお届けしました。",
+      "出演（あいうえお順）\n麻生かほ里・石井一孝・小松亮太・式町水晶・松本晋・三浦剛・山下純一・わたなべちひろ",
     thumbnail: "/images/hero.jpg",
     articleUrl: "https://shonanjin.com/news/live-inclusive-2025/",
   },
@@ -28,7 +28,7 @@ const archives: ArchiveItem[] = [
     year: 2024,
     title: "逗子ライブインクルーシブ 2024",
     description:
-      "初開催となった2024年公演。多くの観客に感動をお届けしました。",
+      "出演（あいうえお順）\n麻生かほ里・石井一孝・大儀見元・片腕のギタリスト輝彦・北原新之助・中井智彦・藤吉乙羽・水野紗希",
     thumbnail: "/images/2024.jpeg",
     articleUrl: "https://shonanjin.com/news/live-inclusive-2024/",
   },
@@ -107,7 +107,7 @@ export default function ArchivePage() {
                     <h2 className="text-2xl font-medium mb-4">
                       {archive.title}
                     </h2>
-                    <p className="text-white/70 leading-relaxed mb-4">
+                    <p className="text-white/70 leading-relaxed mb-4 whitespace-pre-line">
                       {archive.description}
                     </p>
                     {archive.articleUrl && (

@@ -12,17 +12,8 @@ export function Footer() {
           <div>
             <div className="text-sm text-white/60 leading-relaxed space-y-2 mb-6">
               <p>
-                <span className="text-white/80">逗子ライブインクルーシブ実行委員長</span>
-                <br />
-                宮澤 久美
-              </p>
-              <p>
                 <span className="text-white/80">主催：</span>
                 逗子ライブインクルーシブ実行委員会/逗子文化プラザ市民交流センター
-              </p>
-              <p>
-                <span className="text-white/80">企画：</span>
-                スークス株式会社
               </p>
               <p>
                 <span className="text-white/80">共催：</span>
