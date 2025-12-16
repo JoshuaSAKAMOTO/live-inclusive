@@ -41,8 +41,17 @@ export default function Home() {
 
           {/* Content */}
           <div className="relative z-10 text-center px-6 max-w-4xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-wider mb-6">
-              ZUSHI LIVE INCLUSIVE
+            <h1 className="mb-6">
+              <span className="sr-only">ZUSHI LIVE INCLUSIVE</span>
+              <Image
+                src="/images/logo.svg"
+                alt="ZUSHI LIVE INCLUSIVE ロゴ"
+                width={640}
+                height={160}
+                priority
+                className="mx-auto h-24 w-auto md:h-32 lg:h-56"
+                aria-hidden="true"
+              />
             </h1>
             <p className="text-lg md:text-xl text-white/70">
               <span className="block md:inline">{formattedDate}</span>
