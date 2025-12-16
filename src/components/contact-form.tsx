@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import { Turnstile } from "@marsidev/react-turnstile";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
@@ -17,6 +18,7 @@ const API_URL = "https://live-inclusive-api.josh-8b9.workers.dev";
 export function ContactForm() {
   const [status, setStatus] = useState<FormStatus>("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const [turnstileToken, setTurnstileToken] = useState<string>("");
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -45,7 +47,7 @@ export function ContactForm() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, turnstileToken }),
       });
 
       const result = await response.json();
@@ -187,10 +189,17 @@ export function ContactForm() {
         />
       </div>
 
+      <div className="flex justify-center">
+        <Turnstile
+          siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
+          onSuccess={setTurnstileToken}
+        />
+      </div>
+
       <div className="pt-4">
         <button
           type="submit"
-          disabled={status === "submitting"}
+          disabled={status === "submitting" || !turnstileToken}
           className="w-full px-8 py-4 bg-primary text-black font-medium hover:bg-primary-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {status === "submitting" ? "送信中..." : "送信する"}
