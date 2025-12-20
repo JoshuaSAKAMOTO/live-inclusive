@@ -80,7 +80,7 @@ export default function AboutPage() {
                     alt="湘南ミュージックハイスクール"
                     width={128}
                     height={128}
-                    className="h-20 w-auto"
+                    className="h-12 w-auto"
                   />
                 </div>
               </div>
