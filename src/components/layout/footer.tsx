@@ -24,7 +24,7 @@ export function Footer() {
                 神奈川県/逗子市教育委員会/逗子市社会福祉協議会
                 <br />
                 <span className="text-white/80 invisible">後援：</span>
-                鎌倉市/横須賀市/藤沢市（予定）/葉山町（予定）/横浜エフエム放送
+                鎌倉市/横須賀市/藤沢市（予定）/葉山町（予定）
               </p>
               <p>
                 <span className="text-white/80">助成：</span>
@@ -35,13 +35,22 @@ export function Footer() {
                 湘南ミュージックハイスクール
               </p>
             </div>
-            <Image
-              src="/images/mag-cul.jpg"
-              alt="神奈川文化プログラム マグカル"
-              width={128}
-              height={128}
-              className="h-32 w-auto"
-            />
+            <div className="flex gap-4 items-center">
+              <Image
+                src="/images/mag-cul.jpg"
+                alt="神奈川文化プログラム マグカル"
+                width={128}
+                height={128}
+                className="h-32 w-auto"
+              />
+              <Image
+                src="/images/fmy_logo.svg"
+                alt="横浜エフエム放送"
+                width={128}
+                height={128}
+                className="h-16 w-auto"
+              />
+            </div>
           </div>
 
           {/* Navigation */}
