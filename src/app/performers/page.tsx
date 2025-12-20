@@ -58,6 +58,11 @@ export default function PerformersPage() {
                   </div>
                   <h2 className="text-lg font-medium group-hover:text-primary transition-colors">
                     {performer.name}
+                    {performer.thumbnailSuffix && (
+                      <span className="text-sm font-normal text-white/60">
+                        （{performer.thumbnailSuffix}）
+                      </span>
+                    )}
                   </h2>
                   <p className="text-sm text-white/60">{performer.role}</p>
                 </Link>
