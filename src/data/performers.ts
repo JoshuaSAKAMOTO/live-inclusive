@@ -11,7 +11,11 @@ export const performers: Performer[] = [
     thumbnail: "/images/performers/kaoriasoh.png",
     thumbnailPosition: "top",
     photo: "/images/performers/kaoriasoh.png",
-    sns: [{ type: "website", url: "https://www.amuse.co.jp/artist/A0092/index.html" }],
+    sns: [
+      { type: "website", url: "https://www.amuse.co.jp/artist/A0092/index.html" },
+      { type: "instagram", url: "https://www.instagram.com/kaoriasoh_official/" },
+      { type: "x", url: "https://x.com/kaoriasoh/" },
+    ],
   },
   {
     id: "ito-eri",
@@ -19,10 +23,13 @@ export const performers: Performer[] = [
     nameKana: "いとう えり",
     role: "ボーカル",
     profile:
-      "劇団四季35周年即戦力オーディションの合格をきっかけにミュージカルの世界に入り、すぐに「オペラ座の怪人」でヒロイン役に。以後「ミス・サイゴン」「オリバー！」「ルルドの奇跡」などで活躍。また、ディズニー「美女と野獣」の初代ベル役として吹替、歌唱を担当し人気を博した。",
+      "劇団四季即戦力オーディション合格以来、数々のミュージカルにメインキャストとして出演。「ルルドの奇跡」主演で東京芸術劇場ミュージカル月間優秀賞を受賞。ディズニー映画「美女と野獣」ベル役 他吹き替え作品多数。アニメ、CMソングなど録音曲も1000曲を数える。",
     thumbnail: "/images/performers/eriito.png",
     photo: "/images/performers/eriito.png",
-    sns: [{ type: "website", url: "https://www.office-a2.jp/artist/eri.html" }],
+    sns: [
+      { type: "website", url: "https://www.office-a2.jp/artist/eri.html" },
+      { type: "x", url: "https://x.com/Jibahba" },
+    ],
   },
   {
     id: "konogi-mario",
@@ -34,7 +41,11 @@ export const performers: Performer[] = [
     thumbnail: "/images/performers/mariokonogi.png",
     thumbnailPosition: "top",
     photo: "/images/performers/mariokonogi.png",
-    sns: [{ type: "instagram", url: "https://www.instagram.com/mariokonogi/" }],
+    sns: [
+      { type: "instagram", url: "https://www.instagram.com/mariokonogi/" },
+      { type: "x", url: "https://x.com/mariokonogi" },
+      { type: "youtube", url: "https://www.youtube.com/channel/UCBlVL4Dtll732dOeaIRsTLg" },
+    ],
   },
   {
     id: "tagawa-hiroaki",
@@ -42,10 +53,15 @@ export const performers: Performer[] = [
     nameKana: "たがわ ひろあき",
     role: "ギター",
     profile:
-      "パラリンピックの閉会式でも話題をさらった、「ギターのネックを逆から持つ」ロックギタリスト。全盲で一般の奏法を見た経験がないため、ピアノのような独自の演奏スタイルを確立し、超高速プレイからメロディアスなフレーズを奏でる。大阪・関西万博メインステージ出演、学校講演等、多岐に渡って活動展開している。",
+      "パラリンピックの開会式でも話題をさらった、「ギターのネックを逆から持つ」ロックギタリスト。全盲で一般の奏法を見た経験がないため、ピアノのような独自の演奏スタイルを確立し、超高速プレイからメロディアスなフレーズを奏でる。大阪・関西万博メインステージ出演、学校講演等、多岐に渡って活動展開している。",
     thumbnail: "/images/performers/hiroakitagawa.png",
     photo: "/images/performers/hiroakitagawa.png",
-    sns: [{ type: "website", url: "https://fretpiano.com/" }],
+    sns: [
+      { type: "website", url: "https://fretpiano.com/" },
+      { type: "x", url: "https://x.com/Fretpiano" },
+      { type: "instagram", url: "https://www.instagram.com/hiroakitagawa_guitar/" },
+      { type: "facebook", url: "https://www.facebook.com/fretpianotagawa/" },
+    ],
   },
   {
     id: "takuma-yoshiyuki",
@@ -56,7 +72,13 @@ export const performers: Performer[] = [
       "幼少の頃よりマリンバ奏者である父の影響を受けてマレットを持つ。高校時代にジャズに興味を持ち、マリンバと並行してヴィブラフォンを始め、卒業後は世界屈指の名門バークリー音楽院に留学。帰国後はジャンルを問わないプレイスタイルでこの楽器の第一人者として活躍している。",
     thumbnail: "/images/performers/yoshiyukitakuma.png",
     photo: "/images/performers/yoshiyukitakuma.png",
-    sns: [{ type: "website", url: "https://www.takuma-music.com/" }],
+    sns: [
+      { type: "website", url: "https://www.takuma-music.com/" },
+      { type: "instagram", url: "https://www.instagram.com/takuma_vib/" },
+      { type: "youtube", url: "https://www.youtube.com/@takuma_vibraphone/videos" },
+      { type: "x", url: "https://x.com/takuma_vib" },
+      { type: "facebook", url: "https://www.facebook.com/yoshiyuki.t.takuma" },
+    ],
   },
   {
     id: "david-matthews",
@@ -67,7 +89,12 @@ export const performers: Performer[] = [
       "アメリカ・ケンタッキー州出身。ピアニスト、作・編曲家として多くの作品を手掛け、３度のグラミー賞受賞に輝く。日本では80年代に「マンハッタン・ジャズ・クインテット/オーケストラのリーダーとして活躍し、その後日本に移住し、現在は八戸を拠点に活躍。生まれつき右手に力が入らず、通常の右手パートを左手で奏でる。",
     thumbnail: "/images/performers/david-matthews.jpg",
     photo: "/images/performers/david-matthews.jpg",
-    sns: [{ type: "website", url: "https://www.kingrecords.co.jp/cs/artist/artist.aspx?artist=43740" }],
+    sns: [
+      { type: "website", url: "https://www.kingrecords.co.jp/cs/artist/artist.aspx?artist=43740" },
+      { type: "instagram", url: "https://www.instagram.com/davidmatthewsjazz/" },
+      { type: "facebook", url: "https://www.facebook.com/davidmatthewsjazz/" },
+      { type: "x", url: "https://x.com/BeFM_OnAirGig" },
+    ],
   },
   {
     id: "toda-keiko",
@@ -75,9 +102,10 @@ export const performers: Performer[] = [
     nameKana: "とだ けいこ",
     role: "ボーカル",
     profile:
-      "NHK名古屋放送児童劇団を経て、ドラマ「中学生群像」でデビュー。77年、劇団「薔薇座」に入団し、89年まで看板女優として活躍。以後、三谷幸喜作品に数多く出演するほか、テレビドラマ、映画に出演。日本アカデミー賞最優秀助演女優賞受賞。声優としては、「それいけ！アンパンマン」のアンパンマン役、「キャッツ・アイ」瞳役、そしてまた多くの洋画吹替を務める。",
+      "NHK名古屋放送児童劇団を経て、ドラマ「中学生群像」でデビュー。女優として三谷幸喜作品をはじめ数多くのテレビドラマ、映画で活躍。2018年「Sing a Song」で菊田一夫演劇賞受賞。声優としては、「それいけ！アンパンマン」のアンパンマン役、「キャッツ・アイ」瞳役、そして多くの洋画吹替を務める。最近ではNHK連続テレビ小説「あんぱん」に出演。",
     thumbnail: "/images/performers/keikotoda.png",
     thumbnailPosition: "top",
+    thumbnailSuffix: "スペシャルゲスト",
     photo: "/images/performers/keikotoda.png",
     sns: [{ type: "website", url: "https://ameblo.jp/toda-keiko/" }],
   },
@@ -90,7 +118,13 @@ export const performers: Performer[] = [
       "SNS総フォロワー約80万人。女性の聴覚障がい当事者として国内トップクラスの影響力を持つインフルエンサー。1歳から補聴器と読唇術で生活し、手話も習得。情報アクセシビリティや共生社会の実現を目指し、日常の発信に加えて、企業・自治体との協働や講演活動にも取り組んでいる。著書に『音のない世界でコミュ力を磨く』（KADOKAWA）。",
     thumbnail: "/images/performers/nanchousagi.png",
     photo: "/images/performers/nanchousagi.png",
-    sns: [{ type: "website", url: "https://www.u-8.tokyo/talent/usagi-nancyo/" }],
+    sns: [
+      { type: "website", url: "https://www.u-8.tokyo/talent/usagi-nancyo/" },
+      { type: "youtube", url: "https://www.youtube.com/channel/UCcChCSqbhRgB0GA8fcd3dFQ" },
+      { type: "tiktok", url: "https://www.tiktok.com/@yuixrab" },
+      { type: "x", url: "https://x.com/yuixrab" },
+      { type: "instagram", url: "https://www.instagram.com/yuixrab" },
+    ],
   },
   {
     id: "hidano-shuichi",
@@ -101,20 +135,29 @@ export const performers: Performer[] = [
       "Stevie Wonder、Sheila.E、Herbie Hancock他、世界最高峰アーティストや、嵐、ももクロらと共演。世界41ヶ国をツアーし21世紀の太鼓界をリードする。FIFAサッカーW杯は、世界初の3大会の公式閉会式で演奏。2016年「パラリンピックフェスティバル」に大黒摩季、Marty Friedmanらとゲスト出演。国立音楽大学講師。",
     thumbnail: "/images/performers/shuichihidano.png",
     photo: "/images/performers/shuichihidano.png",
-    sns: [{ type: "website", url: "http://www.hidashu.com/" }],
+    sns: [
+      { type: "website", url: "http://www.hidashu.com/" },
+      { type: "facebook", url: "https://www.facebook.com/HidanoXtaikomasters" },
+      { type: "website", url: "https://ameblo.jp/hidashu-cream/" },
+      { type: "youtube", url: "https://www.youtube.com/channel/UClLTJ98xlSk2JnsjiaRAOVQ" },
+    ],
   },
-  // 三浦剛さんは発表前のためコメントアウト
-  // {
-  //   id: "miura-tsuyoshi",
-  //   name: "三浦剛",
-  //   nameKana: "みうら つよし",
-  //   role: "手話パフォーマンス",
-  //   profile:
-  //     "俳優。同じく俳優で聴覚障がい者の忍足亜希子と共演、その後結婚したことをきっかけに手話を習得。忍足との経験が映画「僕が君の耳になる」のモデルとなるなど、ろう者への理解につながる活動を推進している。",
-  //   thumbnail: "/images/performers/tsuyoshimiura.png",
-  //   photo: "/images/performers/tsuyoshimiura.png",
-  //   sns: [{ type: "website", url: "https://www.cubeinc.co.jp/archives/artist/miuratsuyoshi" }],
-  // },
+  {
+    id: "miura-tsuyoshi",
+    name: "三浦剛",
+    nameKana: "みうら つよし",
+    role: "手話パフォーマンス",
+    profile:
+      "俳優。同じく俳優で聴覚障がい者の忍足亜希子と共演、その後結婚したことをきっかけに手話を習得。忍足との経験が映画「僕が君の耳になる」のモデルとなるなど、ろう者への理解につながる活動を推進している。",
+    thumbnail: "/images/performers/tsuyoshimiura.png",
+    photo: "/images/performers/tsuyoshimiura.png",
+    sns: [
+      { type: "website", url: "https://www.cubeinc.co.jp/archives/artist/miuratsuyoshi" },
+      { type: "tiktok", url: "https://www.tiktok.com/@tsuyoshi18sign" },
+      { type: "x", url: "https://x.com/tsuyoshi18" },
+      { type: "instagram", url: "https://www.instagram.com/tsuyoshi.miura.39/" },
+    ],
+  },
   {
     id: "watanabe-chihiro",
     name: "わたなべちひろ",
@@ -124,6 +167,10 @@ export const performers: Performer[] = [
       "視覚に障がいを持ちながら、2歳で鍵盤に触れ、4歳から本格的にピアノを始める。12歳で本格的音楽活動を開始。さらに2021年には、東京パラリンピック閉会式にも出演。LIVE INCLUSIVE 2025では圧巻のパフォーマンスを見せ、今回も満を持しての再登場となる。",
     thumbnail: "/images/performers/chihirowatanabe.png",
     photo: "/images/performers/chihirowatanabe.png",
-    sns: [{ type: "website", url: "https://chihirowofficial.wixsite.com/allsmiles" }],
+    sns: [
+      { type: "website", url: "https://chihirowofficial.wixsite.com/allsmiles" },
+      { type: "youtube", url: "https://www.youtube.com/channel/UCdaZGZnt4TX_7OpPBR4WLJg" },
+      { type: "instagram", url: "https://www.instagram.com/team_chihiro/" },
+    ],
   },
 ];

@@ -50,19 +50,39 @@ export default function AboutPage() {
                   神奈川県/逗子市教育委員会/逗子市社会福祉協議会
                   <br />
                   <span className="text-white/80 invisible">後援：</span>
-                  鎌倉市（予定）/横須賀市/藤沢市（予定）/葉山町（予定）
+                  鎌倉市/横須賀市/藤沢市（予定）/葉山町（予定）/横浜エフエム放送
                 </p>
                 <p>
                   <span className="text-white/80">助成：</span>
                   神奈川県マグカル展開促進助成
                 </p>
-                <Image
-                  src="/images/mag-cul.jpg"
-                  alt="神奈川文化プログラム マグカル"
-                  width={128}
-                  height={128}
-                  className="h-32 w-auto mt-4"
-                />
+                <p>
+                  <span className="text-white/80">協力：</span>
+                  湘南ミュージックハイスクール
+                </p>
+                <div className="flex gap-6 items-center mt-4">
+                  <Image
+                    src="/images/mag-cul.jpg"
+                    alt="神奈川文化プログラム マグカル"
+                    width={128}
+                    height={128}
+                    className="h-32 w-auto"
+                  />
+                  <Image
+                    src="/images/fmy_logo.svg"
+                    alt="横浜エフエム放送"
+                    width={128}
+                    height={128}
+                    className="h-20 w-auto"
+                  />
+                  <Image
+                    src="/images/smh_logo.jpg"
+                    alt="湘南ミュージックハイスクール"
+                    width={128}
+                    height={128}
+                    className="h-20 w-auto"
+                  />
+                </div>
               </div>
             </div>
           </section>

@@ -6,9 +6,10 @@ export interface Performer {
   profile: string;
   thumbnail: string;
   thumbnailPosition?: "top" | "center";
+  thumbnailSuffix?: string;
   photo: string;
   sns?: {
-    type: "twitter" | "x" | "instagram" | "facebook" | "youtube" | "website";
+    type: "twitter" | "x" | "instagram" | "facebook" | "youtube" | "website" | "tiktok";
     url: string;
   }[];
 }
