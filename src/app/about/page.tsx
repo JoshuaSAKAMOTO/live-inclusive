@@ -75,13 +75,13 @@ export default function AboutPage() {
                     height={128}
                     className="h-32 w-auto"
                   />
-                  <Image
+{/*                   <Image
                     src="/images/smh_logo.jpg"
                     alt="湘南ミュージックハイスクール"
                     width={128}
                     height={128}
                     className="h-12 w-auto"
-                  />
+                  /> */}
                 </div>
               </div>
             </div>
