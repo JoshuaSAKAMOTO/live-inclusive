@@ -36,7 +36,7 @@ export default function AboutPage() {
               <p>逗子ライブインクルーシブ実行委員会</p>
               <p>実行委員長　宮澤久美</p>
 
-{/* <div className="mt-8 space-y-4 text-lg">
+              <div className="mt-8 space-y-4 text-lg">
                 <p>
                   <span className="text-white/80">主催：</span>
                   逗子ライブインクルーシブ実行委員会/逗子文化プラザ市民交流センター
@@ -50,8 +50,15 @@ export default function AboutPage() {
                   神奈川県/逗子市教育委員会/逗子市社会福祉協議会
                   <br />
                   <span className="text-white/80 invisible">後援：</span>
-                  鎌倉市/横須賀市/藤沢市（予定）/葉山町（予定）/横浜エフエム放送
+                  鎌倉市/横須賀市/藤沢市（予定）/葉山町（予定）
                 </p>
+                <Image
+                  src="/images/fmy_logo.svg"
+                  alt="横浜エフエム放送"
+                  width={128}
+                  height={128}
+                  className="h-10 w-auto"
+                />
                 <p>
                   <span className="text-white/80">助成：</span>
                   神奈川県マグカル展開促進助成
@@ -69,13 +76,6 @@ export default function AboutPage() {
                     className="h-32 w-auto"
                   />
                   <Image
-                    src="/images/fmy_logo.svg"
-                    alt="横浜エフエム放送"
-                    width={128}
-                    height={128}
-                    className="h-20 w-auto"
-                  />
-                  <Image
                     src="/images/smh_logo.jpg"
                     alt="湘南ミュージックハイスクール"
                     width={128}
@@ -83,7 +83,7 @@ export default function AboutPage() {
                     className="h-12 w-auto"
                   />
                 </div>
-              </div> */}
+              </div>
             </div>
           </section>
         </div>
