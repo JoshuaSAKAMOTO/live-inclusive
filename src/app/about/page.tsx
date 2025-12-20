@@ -36,7 +36,7 @@ export default function AboutPage() {
               <p>逗子ライブインクルーシブ実行委員会</p>
               <p>実行委員長　宮澤久美</p>
 
-              <div className="mt-8 space-y-4 text-lg">
+{/*               <div className="mt-8 space-y-4 text-lg">
                 <p>
                   <span className="text-white/80">主催：</span>
                   逗子ライブインクルーシブ実行委員会/逗子文化プラザ市民交流センター
@@ -75,15 +75,15 @@ export default function AboutPage() {
                     height={128}
                     className="h-32 w-auto"
                   />
-{/*                   <Image
+                  <Image
                     src="/images/smh_logo.jpg"
                     alt="湘南ミュージックハイスクール"
                     width={128}
                     height={128}
                     className="h-12 w-auto"
-                  /> */}
+                  />
                 </div>
-              </div>
+              </div> */}
             </div>
           </section>
         </div>
