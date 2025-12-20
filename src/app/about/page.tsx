@@ -36,7 +36,7 @@ export default function AboutPage() {
               <p>逗子ライブインクルーシブ実行委員会</p>
               <p>実行委員長　宮澤久美</p>
 
-              <div className="mt-8 space-y-4 text-lg">
+{/* <div className="mt-8 space-y-4 text-lg">
                 <p>
                   <span className="text-white/80">主催：</span>
                   逗子ライブインクルーシブ実行委員会/逗子文化プラザ市民交流センター
@@ -83,7 +83,7 @@ export default function AboutPage() {
                     className="h-12 w-auto"
                   />
                 </div>
-              </div>
+              </div> */}
             </div>
           </section>
         </div>
