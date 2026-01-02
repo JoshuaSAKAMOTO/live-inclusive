@@ -170,6 +170,11 @@ export default function Home() {
                   </div>
                   <h3 className="text-sm md:text-base font-medium group-hover:text-white/80 transition-colors">
                     {performer.name}
+                    {performer.thumbnailSuffix && (
+                      <span className="text-xs font-normal text-white/60">
+                        （{performer.thumbnailSuffix}）
+                      </span>
+                    )}
                   </h3>
                   <p className="text-sm text-white/50">{performer.role}</p>
                 </Link>
