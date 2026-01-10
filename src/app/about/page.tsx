@@ -88,7 +88,7 @@ export default function AboutPage() {
           </section>
 
           {/* Preschool Children Policy */}
-          <section className="mb-16">
+          <section className="mt-32 mb-16">
             <h2 className="text-xl font-medium mb-6">未就学児の対応につきまして</h2>
             <div className="space-y-6 text-white/80 leading-relaxed">
               <p>
