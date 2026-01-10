@@ -158,25 +158,40 @@ export default function Home() {
                 <Link
                   key={performer.id}
                   href={`/performers/${performer.id}`}
-                  className="group"
+                  className="group block"
                 >
-                  <div className="aspect-square relative overflow-hidden bg-white/5 mb-2">
-                    <Image
-                      src={performer.thumbnail}
-                      alt={performer.name}
-                      fill
-                      className={`object-cover transition-transform duration-300 group-hover:scale-105 ${performer.thumbnailPosition === "top" ? "object-top" : ""}`}
-                    />
+                  <div className="aspect-square relative overflow-hidden bg-white/5 mb-4">
+                    {performer.thumbnail ? (
+                      <Image
+                        src={performer.thumbnail}
+                        alt={performer.name}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        style={{ objectPosition: performer.thumbnailPosition || "center" }}
+                        sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                      />
+                    ) : (
+                      <div className="absolute inset-0 flex items-center justify-center text-white/20">
+                        <svg
+                          className="w-16 h-16"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                        </svg>
+                      </div>
+                    )}
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
                   </div>
-                  <h3 className="text-sm md:text-base font-medium group-hover:text-white/80 transition-colors">
+                  <h3 className="text-sm md:text-base font-medium group-hover:text-primary transition-colors">
                     {performer.name}
                     {performer.thumbnailSuffix && (
-                      <span className="text-xs font-normal text-white/60">
+                      <span className="text-sm font-normal text-white/60">
                         （{performer.thumbnailSuffix}）
                       </span>
                     )}
                   </h3>
-                  <p className="text-sm text-white/50">{performer.role}</p>
+                  <p className="text-sm text-white/60">{performer.role}</p>
                 </Link>
               ))}
             </div>
