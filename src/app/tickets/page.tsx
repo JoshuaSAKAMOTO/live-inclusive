@@ -105,6 +105,26 @@ export default function TicketsPage() {
             )}
           </section>
 
+          {/* Advance Ticket */}
+          <section className="mt-12 text-center">
+            <div className="py-12 bg-white/5 border border-white/10">
+              <h2 className="text-xl font-medium mb-4">公式サイト先行チケット受付</h2>
+              <p className="text-white/60 mb-6">
+                一般販売に先駆けて、公式サイトからお申し込みいただけます
+                <br />
+                お支払いは銀行振込のみとなります
+              </p>
+              <a
+                href="https://forms.gle/eqGM2xYkWof4qLLL6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-12 py-4 bg-primary text-black text-lg font-medium hover:bg-primary-dark transition-colors"
+              >
+                先行チケットを申し込む
+              </a>
+            </div>
+          </section>
+
           {/* Notes */}
           <section className="mt-16">
             <h2 className="text-lg font-medium mb-4">ご注意</h2>
