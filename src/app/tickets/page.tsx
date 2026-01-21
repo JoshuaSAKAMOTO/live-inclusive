@@ -108,7 +108,7 @@ export default function TicketsPage() {
           {/* Advance Ticket */}
           <section className="mt-12 text-center">
             <div className="py-12 bg-white/5 border border-white/10">
-              <h2 className="text-xl font-medium mb-4">公式サイト先行チケット受付</h2>
+              <h2 className="text-xl font-medium mb-4">公式サイトチケット受付</h2>
               <p className="text-white/60 mb-6">
                 一般販売に先駆けて、公式サイトからお申し込みいただけます
                 <br />
@@ -120,7 +120,7 @@ export default function TicketsPage() {
                 rel="noopener noreferrer"
                 className="inline-block px-12 py-4 bg-primary text-black text-lg font-medium hover:bg-primary-dark transition-colors"
               >
-                先行チケットを申し込む
+                チケットを申し込む
               </a>
             </div>
           </section>
