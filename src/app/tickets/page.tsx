@@ -84,25 +84,27 @@ export default function TicketsPage() {
             <p className="mt-4 text-sm text-white/50 text-right">※価格は税込</p>
           </section>
 
-          {/* Purchase Button */}
+          {/* Purchase Buttons */}
           <section className="text-center">
-            {event.ticketUrl ? (
+            <h2 className="text-xl font-medium mb-6">チケット購入</h2>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href={event.ticketUrl}
+                href="https://t.pia.jp/pia/event/event.do?eventCd=2548763"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-12 py-4 bg-primary text-black text-lg font-medium hover:bg-primary-dark transition-colors"
               >
-                チケットを購入する
+                チケットぴあ
               </a>
-            ) : (
-              <div className="py-12 bg-white/5 border border-white/10">
-                <p className="text-xl text-white/60 mb-2">Coming Soon</p>
-                <p className="text-white/40">
-                  2026年1月24日より、チケットぴあ/イープラスにて販売開始予定
-                </p>
-              </div>
-            )}
+              <a
+                href="https://eplus.jp/sf/detail/4459860001-P0030001"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-12 py-4 bg-primary text-black text-lg font-medium hover:bg-primary-dark transition-colors"
+              >
+                イープラス
+              </a>
+            </div>
           </section>
 
           {/* Advance Ticket */}
