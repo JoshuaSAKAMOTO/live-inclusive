@@ -86,8 +86,9 @@ export default function TicketsPage() {
 
           {/* Purchase Buttons */}
           <section className="text-center">
-            <h2 className="text-xl font-medium mb-6">チケット購入</h2>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="py-12 bg-white/5 border border-white/10">
+              <h2 className="text-xl font-medium mb-6">チケット購入</h2>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="https://t.pia.jp/pia/event/event.do?eventCd=2548763"
                 target="_blank"
@@ -104,6 +105,7 @@ export default function TicketsPage() {
               >
                 イープラス
               </a>
+              </div>
             </div>
           </section>
 
