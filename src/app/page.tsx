@@ -232,38 +232,24 @@ export default function Home() {
         {/* News Section */}
         <NewsSection />
 
-        {/* CTA Section */}
-        {siteConfig.crowdfundingUrl && (
-          <section className="py-24 md:py-32 px-6 text-center">
-            <h2 className="text-2xl md:text-3xl font-medium text-center mb-12">
-              CLOUD FUNDING
-            </h2>
-            <div className="max-w-4xl mx-auto mb-8">
-              <a
-                href={siteConfig.crowdfundingUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block hover:opacity-90 transition-opacity"
-              >
-                <Image
-                  src="/images/campfire.png"
-                  alt="ZUSHI LIVE INCLUSIVE 2026 クラウドファンディング実施中。たくさんのご支援ありがとうございます。現在、ネクストゴール60万円に挑戦中！音楽の軌跡に逗子でまた会える。"
-                  width={1200}
-                  height={800}
-                  className="w-full h-auto rounded-lg"
-                />
-              </a>
-            </div>
-            <a
-              href={siteConfig.crowdfundingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-8 py-3 border border-white/30 hover:border-white hover:bg-white/5 transition-all"
-            >
-              クラウドファンディングを見る
-            </a>
-          </section>
-        )}
+        {/* Crowdfunding Thanks Section */}
+        <section className="py-24 md:py-32 px-6 text-center">
+          <h2 className="text-2xl md:text-3xl font-medium text-center mb-12">
+            CLOUD FUNDING
+          </h2>
+          <div className="max-w-4xl mx-auto mb-8">
+            <Image
+              src="/images/campfire.png"
+              alt="ZUSHI LIVE INCLUSIVE 2026 クラウドファンディング"
+              width={1200}
+              height={800}
+              className="w-full h-auto rounded-lg"
+            />
+          </div>
+          <p className="text-xl text-white/80">
+            ご協力ありがとうございました！
+          </p>
+        </section>
 
         {/* Location Section */}
         <section className="py-24 md:py-32 px-6">
