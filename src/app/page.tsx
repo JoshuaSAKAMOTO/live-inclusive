@@ -240,7 +240,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto mb-8">
             <Image
               src="/images/campfire.png"
-              alt="ZUSHI LIVE INCLUSIVE 2026 クラウドファンディング"
+              alt="ZUSHI LIVE INCLUSIVE 2026 クラウドファンディング 目標315%達成 946,500円 支援者114人"
               width={1200}
               height={800}
               className="w-full h-auto rounded-lg"
