@@ -283,7 +283,7 @@ export default function Home() {
                   height={80}
                   className="h-12 w-auto"
                 />
-                <span className="text-lg text-black/80">共立興産株式会社</span>
+                <span className="text-xl font-bold text-black/80">共立興産株式会社</span>
               </div>
 
               {/* Tier 3 - Smallest */}
@@ -312,9 +312,9 @@ export default function Home() {
                   />
                 </div>
                 <div className="flex flex-wrap justify-center items-center gap-6">
-                  <span className="text-base text-black/70">いけがみ眼科整形外科</span>
-                  <span className="text-base text-black/70">D&S</span>
-                  <span className="text-base text-black/70">さくま公認会計士税理士事務所</span>
+                  <span className="text-base font-bold text-black/70">いけがみ眼科整形外科</span>
+                  <span className="text-base font-bold text-black/70">D&S</span>
+                  <span className="text-base font-bold text-black/70">さくま公認会計士税理士事務所</span>
                 </div>
               </div>
             </div>
