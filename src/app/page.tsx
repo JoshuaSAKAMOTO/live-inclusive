@@ -254,7 +254,7 @@ export default function Home() {
 
             {/* Sponsors Container */}
             <div className="bg-white rounded-lg p-8 md:p-12">
-              <h3 className="text-lg font-medium text-black mb-8">ご支援を頂戴した企業・団体</h3>
+              <h3 className="text-2xl font-medium text-black mb-8">ご支援を頂戴した企業・団体</h3>
 
               {/* Tier 1 - Largest */}
               <div className="mb-12">
