@@ -232,23 +232,84 @@ export default function Home() {
         {/* News Section */}
         <NewsSection />
 
-        {/* Crowdfunding Thanks Section */}
-        <section className="py-24 md:py-32 px-6 text-center">
-          <h2 className="text-2xl md:text-3xl font-medium text-center mb-12">
-            CLOUD FUNDING
-          </h2>
-          <div className="max-w-4xl mx-auto mb-8">
-            <Image
-              src="/images/campfire.png"
-              alt="ZUSHI LIVE INCLUSIVE 2026 クラウドファンディング 目標315%達成 946,500円 支援者114人"
-              width={1200}
-              height={800}
-              className="w-full h-auto rounded-lg"
-            />
+        {/* Supporters Section */}
+        <section className="py-24 md:py-32 px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl font-medium mb-12">
+              SUPPORTERS
+            </h2>
+
+            <p className="text-white/80 mb-12">
+              逗子ライブインクルーシブは、主旨にご賛同いただいた多くの方々や企業によって支えられています。
+            </p>
+
+            {/* Crowdfunding Results */}
+            <div className="mb-16 p-8 bg-white/5 rounded-lg">
+              <h3 className="text-lg font-medium mb-4">本年実施のクラウドファンディング実績</h3>
+              <div className="flex flex-col sm:flex-row justify-center gap-8 text-white/80">
+                <p>ご支援総額　<span className="text-2xl font-medium text-white">946,500</span>円</p>
+                <p>ご支援者数　<span className="text-2xl font-medium text-white">114</span>名（法人含む）</p>
+              </div>
+            </div>
+
+            {/* Tier 1 - Largest */}
+            <div className="mb-12">
+              <Image
+                src="/images/cloudfounding/shonami.png"
+                alt="湘南ミュージックハイスクール"
+                width={400}
+                height={100}
+                className="h-24 w-auto mx-auto"
+              />
+            </div>
+
+            {/* Tier 2 - Medium */}
+            <div className="mb-12 flex flex-wrap justify-center items-center gap-8">
+              <Image
+                src="/images/cloudfounding/sal.jpeg"
+                alt="Social Art Lab"
+                width={200}
+                height={80}
+                className="h-16 w-auto"
+              />
+              <Image
+                src="/images/cloudfounding/colowide.jpeg"
+                alt="コロワイド"
+                width={200}
+                height={80}
+                className="h-16 w-auto"
+              />
+              <span className="text-lg text-white/80">共立興産株式会社</span>
+            </div>
+
+            {/* Tier 3 - Smallest */}
+            <div className="flex flex-wrap justify-center items-center gap-6">
+              <Image
+                src="/images/cloudfounding/kikuchi.png"
+                alt="菊池"
+                width={100}
+                height={50}
+                className="h-12 w-auto"
+              />
+              <Image
+                src="/images/cloudfounding/sekisui.jpeg"
+                alt="積水ハウス"
+                width={100}
+                height={50}
+                className="h-12 w-auto"
+              />
+              <Image
+                src="/images/cloudfounding/medi-style.png"
+                alt="医療法人メディスタイル"
+                width={100}
+                height={50}
+                className="h-12 w-auto"
+              />
+              <span className="text-sm text-white/70">いけがみ眼科整形外科</span>
+              <span className="text-sm text-white/70">D&S</span>
+              <span className="text-sm text-white/70">さくま公認会計士税理士事務所</span>
+            </div>
           </div>
-          <p className="text-xl text-white/80">
-            ご協力ありがとうございました！
-          </p>
         </section>
 
         {/* Location Section */}
