@@ -252,62 +252,67 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Tier 1 - Largest */}
-            <div className="mb-12">
-              <Image
-                src="/images/cloudfounding/shonami.png"
-                alt="湘南ミュージックハイスクール"
-                width={400}
-                height={100}
-                className="h-24 w-auto mx-auto"
-              />
-            </div>
+            {/* Sponsors Container */}
+            <div className="bg-white rounded-lg p-8 md:p-12">
+              <h3 className="text-lg font-medium text-black mb-8">ご支援を頂戴した企業・団体</h3>
 
-            {/* Tier 2 - Medium */}
-            <div className="mb-12 flex flex-wrap justify-center items-center gap-8">
-              <Image
-                src="/images/cloudfounding/sal.jpeg"
-                alt="Social Art Lab"
-                width={200}
-                height={80}
-                className="h-16 w-auto"
-              />
-              <Image
-                src="/images/cloudfounding/colowide.jpeg"
-                alt="コロワイド"
-                width={200}
-                height={80}
-                className="h-16 w-auto"
-              />
-              <span className="text-lg text-white/80">共立興産株式会社</span>
-            </div>
+              {/* Tier 1 - Largest */}
+              <div className="mb-12">
+                <Image
+                  src="/images/cloudfounding/shonami.png"
+                  alt="湘南ミュージックハイスクール"
+                  width={400}
+                  height={100}
+                  className="h-24 w-auto mx-auto"
+                />
+              </div>
 
-            {/* Tier 3 - Smallest */}
-            <div className="flex flex-wrap justify-center items-center gap-6">
-              <Image
-                src="/images/cloudfounding/kikuchi.png"
-                alt="菊池"
-                width={100}
-                height={50}
-                className="h-12 w-auto"
-              />
-              <Image
-                src="/images/cloudfounding/sekisui.jpeg"
-                alt="積水ハウス"
-                width={100}
-                height={50}
-                className="h-12 w-auto"
-              />
-              <Image
-                src="/images/cloudfounding/medi-style.png"
-                alt="医療法人メディスタイル"
-                width={100}
-                height={50}
-                className="h-12 w-auto"
-              />
-              <span className="text-sm text-white/70">いけがみ眼科整形外科</span>
-              <span className="text-sm text-white/70">D&S</span>
-              <span className="text-sm text-white/70">さくま公認会計士税理士事務所</span>
+              {/* Tier 2 - Medium */}
+              <div className="mb-12 flex flex-wrap justify-center items-center gap-8">
+                <Image
+                  src="/images/cloudfounding/sal.jpeg"
+                  alt="Social Art Lab"
+                  width={200}
+                  height={80}
+                  className="h-16 w-auto"
+                />
+                <Image
+                  src="/images/cloudfounding/colowide.jpeg"
+                  alt="コロワイド"
+                  width={200}
+                  height={80}
+                  className="h-16 w-auto"
+                />
+                <span className="text-lg text-black/80">共立興産株式会社</span>
+              </div>
+
+              {/* Tier 3 - Smallest */}
+              <div className="flex flex-wrap justify-center items-center gap-6">
+                <Image
+                  src="/images/cloudfounding/kikuchi.png"
+                  alt="菊池"
+                  width={100}
+                  height={50}
+                  className="h-12 w-auto"
+                />
+                <Image
+                  src="/images/cloudfounding/sekisui.jpeg"
+                  alt="積水ハウス"
+                  width={100}
+                  height={50}
+                  className="h-12 w-auto"
+                />
+                <Image
+                  src="/images/cloudfounding/medi-style.png"
+                  alt="医療法人メディスタイル"
+                  width={100}
+                  height={50}
+                  className="h-12 w-auto"
+                />
+                <span className="text-sm text-black/70">いけがみ眼科整形外科</span>
+                <span className="text-sm text-black/70">D&S</span>
+                <span className="text-sm text-black/70">さくま公認会計士税理士事務所</span>
+              </div>
             </div>
           </div>
         </section>
