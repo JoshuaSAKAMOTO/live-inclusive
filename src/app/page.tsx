@@ -258,61 +258,73 @@ export default function Home() {
 
               {/* Tier 1 - Largest */}
               <div className="mb-12">
-                <Image
-                  src="/images/cloudfounding/shonami.png"
-                  alt="湘南ミュージックハイスクール"
-                  width={400}
-                  height={100}
-                  className="h-24 w-auto mx-auto"
-                />
+                <a href="https://niibori.ac.jp/snm/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                  <Image
+                    src="/images/cloudfounding/shonami.png"
+                    alt="湘南ミュージックハイスクール"
+                    width={400}
+                    height={100}
+                    className="h-24 w-auto mx-auto"
+                  />
+                </a>
               </div>
 
               {/* Tier 2 - Medium */}
               <div className="mb-12 flex flex-wrap justify-center items-center gap-8">
-                <Image
-                  src="/images/cloudfounding/sal.jpeg"
-                  alt="Social Art Lab"
-                  width={200}
-                  height={80}
-                  className="h-16 w-auto"
-                />
-                <Image
-                  src="/images/cloudfounding/colowide.jpeg"
-                  alt="コロワイド"
-                  width={200}
-                  height={80}
-                  className="h-12 w-auto"
-                />
+                <a href="https://socialartlab.org/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                  <Image
+                    src="/images/cloudfounding/sal.jpeg"
+                    alt="Social Art Lab"
+                    width={200}
+                    height={80}
+                    className="h-16 w-auto"
+                  />
+                </a>
+                <a href="https://www.colowide.co.jp/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                  <Image
+                    src="/images/cloudfounding/colowide.jpeg"
+                    alt="コロワイド"
+                    width={200}
+                    height={80}
+                    className="h-12 w-auto"
+                  />
+                </a>
                 <span className="text-xl font-bold text-black/80">共立興産株式会社</span>
               </div>
 
               {/* Tier 3 - Smallest */}
               <div className="space-y-6">
                 <div className="flex flex-wrap justify-center items-center gap-8">
-                  <Image
-                    src="/images/cloudfounding/kikuchi.png"
-                    alt="菊池"
-                    width={100}
-                    height={50}
-                    className="h-16 w-auto"
-                  />
-                  <Image
-                    src="/images/cloudfounding/sekisui.jpeg"
-                    alt="積水ハウス"
-                    width={100}
-                    height={50}
-                    className="h-16 w-auto"
-                  />
-                  <Image
-                    src="/images/cloudfounding/medi-style.png"
-                    alt="医療法人メディスタイル"
-                    width={100}
-                    height={50}
-                    className="h-16 w-auto"
-                  />
+                  <a href="https://kikuchi-taxi.co.jp/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                    <Image
+                      src="/images/cloudfounding/kikuchi.png"
+                      alt="菊池"
+                      width={100}
+                      height={50}
+                      className="h-16 w-auto"
+                    />
+                  </a>
+                  <a href="https://www.sekisuihouse.co.jp/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                    <Image
+                      src="/images/cloudfounding/sekisui.jpeg"
+                      alt="積水ハウス"
+                      width={100}
+                      height={50}
+                      className="h-16 w-auto"
+                    />
+                  </a>
+                  <a href="https://mc.medi-style.jp/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                    <Image
+                      src="/images/cloudfounding/medi-style.png"
+                      alt="医療法人メディスタイル"
+                      width={100}
+                      height={50}
+                      className="h-16 w-auto"
+                    />
+                  </a>
                 </div>
                 <div className="flex flex-wrap justify-center items-center gap-6">
-                  <span className="text-base font-bold text-black/70">いけがみ眼科整形外科</span>
+                  <a href="https://www.ikegami-clin.com/" target="_blank" rel="noopener noreferrer" className="text-base font-bold text-black/70 hover:text-black transition-colors">いけがみ眼科整形外科</a>
                   <span className="text-base font-bold text-black/70">D&S</span>
                   <span className="text-base font-bold text-black/70">さくま公認会計士税理士事務所</span>
                 </div>
