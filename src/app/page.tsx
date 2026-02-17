@@ -2,7 +2,6 @@ import { Header, Footer } from "@/components/layout";
 import { siteConfig } from "@/data/site";
 import { event } from "@/data/event";
 import { performers } from "@/data/performers";
-import { InstagramEmbed } from "@/components/instagram-embed";
 import { NewsSection } from "@/components/news-section";
 import Link from "next/link";
 import Image from "next/image";
@@ -365,15 +364,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Instagram Section */}
-        <section className="py-24 md:py-32 px-6">
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8 justify-items-center">
-              <InstagramEmbed postUrl="https://www.instagram.com/p/DRt03J6EtUs/" />
-              <InstagramEmbed postUrl="https://www.instagram.com/p/DR83qIqkhzF/" />
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />
