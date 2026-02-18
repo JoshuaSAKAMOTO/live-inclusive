@@ -285,7 +285,7 @@ export default function Home() {
                     alt="コロワイド"
                     width={200}
                     height={80}
-                    className="h-12 w-auto object-contain"
+                    className="h-8 md:h-12 w-auto object-contain"
                   />
                 </a>
                 <span className="text-xl font-bold text-black/80">共立興産株式会社</span>
