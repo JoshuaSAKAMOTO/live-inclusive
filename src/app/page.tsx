@@ -263,29 +263,29 @@ export default function Home() {
                     alt="湘南ミュージックハイスクール"
                     width={400}
                     height={100}
-                    className="h-24 w-auto mx-auto"
+                    className="h-24 w-auto mx-auto object-contain"
                   />
                 </a>
               </div>
 
               {/* Tier 2 - Medium */}
               <div className="mb-12 flex flex-wrap justify-center items-center gap-8">
-                <a href="https://socialartlab.org/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                <a href="https://socialartlab.org/" target="_blank" rel="noopener noreferrer" className="shrink-0 hover:opacity-80 transition-opacity">
                   <Image
                     src="/images/cloudfounding/sal.jpeg"
                     alt="Social Art Lab"
                     width={200}
                     height={80}
-                    className="h-16 w-auto"
+                    className="h-16 w-auto object-contain"
                   />
                 </a>
-                <a href="https://www.colowide.co.jp/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                <a href="https://www.colowide.co.jp/" target="_blank" rel="noopener noreferrer" className="shrink-0 hover:opacity-80 transition-opacity">
                   <Image
                     src="/images/cloudfounding/colowide.jpeg"
                     alt="コロワイド"
                     width={200}
                     height={80}
-                    className="h-12 w-auto"
+                    className="h-12 w-auto object-contain"
                   />
                 </a>
                 <span className="text-xl font-bold text-black/80">共立興産株式会社</span>
@@ -294,31 +294,31 @@ export default function Home() {
               {/* Tier 3 - Smallest */}
               <div className="space-y-6">
                 <div className="flex flex-wrap justify-center items-center gap-8">
-                  <a href="https://kikuchi-taxi.co.jp/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                  <a href="https://kikuchi-taxi.co.jp/" target="_blank" rel="noopener noreferrer" className="shrink-0 hover:opacity-80 transition-opacity">
                     <Image
                       src="/images/cloudfounding/kikuchi.png"
                       alt="菊池"
                       width={100}
                       height={50}
-                      className="h-16 w-auto"
+                      className="h-20 md:h-16 w-auto object-contain"
                     />
                   </a>
-                  <a href="https://www.sekisuihouse.co.jp/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                  <a href="https://www.sekisuihouse.co.jp/" target="_blank" rel="noopener noreferrer" className="shrink-0 hover:opacity-80 transition-opacity">
                     <Image
                       src="/images/cloudfounding/sekisui.jpeg"
                       alt="積水ハウス"
                       width={100}
                       height={50}
-                      className="h-16 w-auto"
+                      className="h-20 md:h-16 w-auto object-contain"
                     />
                   </a>
-                  <a href="https://mc.medi-style.jp/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                  <a href="https://mc.medi-style.jp/" target="_blank" rel="noopener noreferrer" className="shrink-0 hover:opacity-80 transition-opacity">
                     <Image
                       src="/images/cloudfounding/medi-style.png"
                       alt="医療法人メディスタイル"
                       width={100}
                       height={50}
-                      className="h-16 w-auto"
+                      className="h-20 md:h-16 w-auto object-contain"
                     />
                   </a>
                 </div>
