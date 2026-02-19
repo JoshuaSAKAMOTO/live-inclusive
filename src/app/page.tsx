@@ -325,7 +325,13 @@ export default function Home() {
                 <div className="flex flex-wrap justify-center items-center gap-6">
                   <a href="https://www.ikegami-clin.com/" target="_blank" rel="noopener noreferrer" className="text-base font-bold text-black/70 hover:text-black transition-colors">いけがみ眼科整形外科</a>
                   <span className="text-base font-bold text-black/70">D&S</span>
-                  <span className="text-base font-bold text-black/70">さくま公認会計士税理士事務所</span>
+                  <Image
+                    src="/images/cloudfounding/sakuma.jpeg"
+                    alt="さくま公認会計士税理士事務所"
+                    width={100}
+                    height={50}
+                    className="h-20 md:h-16 w-auto object-contain"
+                  />
                 </div>
               </div>
             </div>
