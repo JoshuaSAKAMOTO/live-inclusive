@@ -222,8 +222,7 @@ export default function Home() {
               </li>
             </ul>
             <div className="text-center text-white/70 space-y-1">
-              <p>チケットぴあ/イープラスにて発売予定</p>
-              <p>一般発売予定日：2026年1月24日（一部先行あり）</p>
+              <p>チケットぴあ/イープラス/公式サイトにて絶賛販売中！</p>
             </div>
           </div>
         </section>
