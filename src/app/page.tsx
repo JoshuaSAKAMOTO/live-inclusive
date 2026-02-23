@@ -17,6 +17,13 @@ export default function Home() {
 
   return (
     <>
+      {/* Announcement Banner */}
+      <div className="bg-primary text-black text-center py-3 px-6">
+        <Link href="/tickets" className="font-medium hover:underline">
+          チケット絶賛販売中！
+        </Link>
+      </div>
+
       <Header />
 
       <main id="main-content">
