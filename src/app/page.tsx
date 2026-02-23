@@ -3,6 +3,7 @@ import { siteConfig } from "@/data/site";
 import { event } from "@/data/event";
 import { performers } from "@/data/performers";
 import { NewsSection } from "@/components/news-section";
+import { TicketAnnouncement } from "@/components/ticket-announcement";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -17,14 +18,8 @@ export default function Home() {
 
   return (
     <>
-      {/* Announcement Banner */}
-      <div className="bg-primary text-black text-center py-3 px-6">
-        <Link href="/tickets" className="font-medium hover:underline">
-          チケット絶賛販売中！
-        </Link>
-      </div>
-
       <Header />
+      <TicketAnnouncement />
 
       <main id="main-content">
         {/* Hero Section */}
