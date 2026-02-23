@@ -224,6 +224,11 @@ export default function Home() {
             <div className="text-center text-white/70 space-y-1">
               <p>チケットぴあ/イープラス/公式サイトにて絶賛販売中！</p>
             </div>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center mt-8">
+              <a href="https://t.pia.jp/pia/event/event.do?eventCd=2548763" target="_blank" rel="noopener noreferrer" className="px-6 py-2 border border-white/30 text-sm hover:border-white hover:bg-white/5 transition-all">チケットぴあ</a>
+              <a href="https://eplus.jp/sf/detail/4459860001-P0030001" target="_blank" rel="noopener noreferrer" className="px-6 py-2 border border-white/30 text-sm hover:border-white hover:bg-white/5 transition-all">イープラス</a>
+              <Link href="/tickets" className="px-6 py-2 border border-white/30 text-sm hover:border-white hover:bg-white/5 transition-all">公式サイト</Link>
+            </div>
           </div>
         </section>
 
