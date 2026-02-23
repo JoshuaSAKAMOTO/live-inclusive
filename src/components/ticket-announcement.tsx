@@ -39,7 +39,7 @@ export function TicketAnnouncement() {
 
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-center justify-center p-4"
+      className="fixed inset-0 z-[100] flex items-start justify-center pt-20 md:pt-24 p-4"
       role="dialog"
       aria-modal="true"
       aria-label="チケット販売のお知らせ"
