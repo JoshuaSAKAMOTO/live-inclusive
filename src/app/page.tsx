@@ -57,6 +57,8 @@ export default function Home() {
             <p className="text-lg md:text-xl text-white/70">
               <span className="block md:inline">{formattedDate}</span>
               <span className="hidden md:inline">　</span>
+              <span className="block md:inline">15時開演</span>
+              <span className="hidden md:inline">　</span>
               <span className="block md:inline">{event.venue}</span>
             </p>
           </div>
