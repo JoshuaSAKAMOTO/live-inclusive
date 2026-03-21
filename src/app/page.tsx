@@ -224,8 +224,11 @@ export default function Home() {
                 <span className="text-lg">¥2,500</span>
               </li>
             </ul>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center mt-8">
-              <Link href="/tickets" className="px-6 py-2 border border-white/30 text-sm hover:border-white hover:bg-white/5 transition-all">公式サイト</Link>
+            <div className="text-center text-white/70 space-y-1 mt-8">
+              <p>当日券はキャンセル待ちのみとなります。<br />あらかじめご了承ください</p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center mt-4">
+              <Link href="/tickets" className="px-6 py-2 border border-white/30 text-sm hover:border-white hover:bg-white/5 transition-all">チケットキャンセル待ち受付</Link>
             </div>
           </div>
         </section>
