@@ -114,8 +114,6 @@ export default function TicketsPage() {
             <div className="py-12 bg-white/5 border border-white/10">
               <h2 className="text-xl font-medium mb-4">公式サイトチケット受付</h2>
               <p className="text-white/60 mb-6">
-                一般販売に先駆けて、公式サイトからお申し込みいただけます
-                <br />
                 お支払いは銀行振込のみとなります
               </p>
               <a
