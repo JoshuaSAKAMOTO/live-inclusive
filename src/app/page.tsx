@@ -202,8 +202,9 @@ export default function Home() {
         {/* Ticket Section */}
         <section className="py-24 md:py-32 px-6 bg-white/5">
           <div className="max-w-md mx-auto">
-            <h2 className="text-2xl md:text-3xl font-medium text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-medium text-center mb-12 flex items-center justify-center gap-3">
               TICKETS
+              <span className="text-xs px-3 py-1 bg-red-500/20 text-red-400 border border-red-500/30">満員御礼</span>
             </h2>
             <ul className="space-y-3 mb-8">
               <li className="flex items-baseline justify-between border-b border-white/10 pb-3">

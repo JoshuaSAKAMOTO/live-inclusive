@@ -59,7 +59,10 @@ export default function TicketsPage() {
 
           {/* Ticket Prices */}
           <section className="mb-16">
-            <h2 className="text-xl font-medium mb-8">チケット料金</h2>
+            <h2 className="text-xl font-medium mb-8 flex items-center gap-3">
+              チケット料金
+              <span className="text-xs px-3 py-1 bg-red-500/20 text-red-400 border border-red-500/30">満員御礼</span>
+            </h2>
 
             <div className="space-y-4">
               {event.prices.map((price) => (
