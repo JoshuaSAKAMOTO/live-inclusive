@@ -92,6 +92,11 @@ export default function TicketsPage() {
             <div className="py-12 bg-white/5 border border-white/10">
               <h2 className="text-xl font-medium mb-4">公式サイトチケット受付</h2>
               <p className="text-white/60 mb-6">
+                当日券はキャンセル待ちのみとなります。
+                <br />
+                あらかじめご了承ください
+              </p>
+              <p className="text-white/60 mb-6">
                 お支払いは銀行振込のみとなります
               </p>
               <a
