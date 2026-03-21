@@ -96,9 +96,6 @@ export default function TicketsPage() {
                 <br />
                 あらかじめご了承ください
               </p>
-              <p className="text-white/60 mb-6">
-                お支払いは銀行振込のみとなります
-              </p>
               <a
                 href="https://forms.gle/eqGM2xYkWof4qLLL6"
                 target="_blank"
