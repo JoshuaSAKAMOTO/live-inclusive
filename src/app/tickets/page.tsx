@@ -87,26 +87,6 @@ export default function TicketsPage() {
             <p className="mt-4 text-sm text-white/50 text-right">※価格は税込</p>
           </section>
 
-          {/* Advance Ticket */}
-          <section className="mt-12 text-center">
-            <div className="py-12 bg-white/5 border border-white/10">
-              <h2 className="text-xl font-medium mb-4">公式サイトチケット受付</h2>
-              <p className="text-white/60 mb-6">
-                当日券はキャンセル待ちのみとなります。
-                <br />
-                あらかじめご了承ください
-              </p>
-              <a
-                href="https://forms.gle/eqGM2xYkWof4qLLL6"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-12 py-4 bg-primary text-black text-lg font-medium hover:bg-primary-dark transition-colors"
-              >
-                チケットを申し込む
-              </a>
-            </div>
-          </section>
-
           {/* Notes */}
           <section className="mt-16">
             <h2 className="text-lg font-medium mb-4">ご注意</h2>
