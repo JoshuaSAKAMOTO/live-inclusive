@@ -30,6 +30,13 @@ export default function TicketsPage() {
             <p className="text-white/60">チケット情報</p>
           </div>
 
+          {/* Sold Out Notice */}
+          <section className="mb-16">
+            <div className="py-10 bg-white/5 border border-white/10 text-center">
+              <p className="text-xl md:text-2xl font-medium">チケットの販売は終了しました</p>
+            </div>
+          </section>
+
           {/* Event Info */}
           <section className="mb-16">
             <div className="bg-white/5 p-8 md:p-12">
