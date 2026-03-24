@@ -29,7 +29,7 @@ export default function Home() {
           <div className="absolute inset-0">
             <Image
               src={siteConfig.heroImage}
-              alt="ライブインクルーシブ2025の舞台。LED字幕に歌詞が映し出される中、子どもたちとアーティストがステージに並ぶ"
+              alt="ライブインクルーシブ2025フィナーレの画像。グリーンのTシャツを着たバンドメンバー含めた16人が舞台に横に並ぶ"
               fill
               priority
               className="object-cover object-center"
