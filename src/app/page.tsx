@@ -38,9 +38,9 @@ export default function Home() {
             <div className="absolute inset-0 bg-black/40" />
           </div>
 
-          {/* Content */}
-          <div className="relative z-10 text-center px-6 max-w-4xl">
-            <h1 className="mb-6">
+          {/* Logo */}
+          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-center px-6 max-w-4xl w-full">
+            <h1>
               <span className="sr-only">ZUSHI LIVE INCLUSIVE</span>
               <Image
                 src="/images/logo.svg"
@@ -52,6 +52,10 @@ export default function Home() {
                 aria-hidden="true"
               />
             </h1>
+          </div>
+
+          {/* Event Info */}
+          <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-10 text-center px-6">
             <p className="text-lg md:text-xl text-white/70">
               <span className="block md:inline">{formattedDate}</span>
               <span className="hidden md:inline">　</span>
