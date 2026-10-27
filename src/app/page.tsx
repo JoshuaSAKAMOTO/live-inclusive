@@ -7,14 +7,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function Home() {
-  const eventDate = new Date(event.date);
-  const formattedDate = eventDate.toLocaleDateString("ja-JP", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    weekday: "short",
-  });
-
   return (
     <>
       <Header />
@@ -56,12 +48,11 @@ export default function Home() {
 
           {/* Event Info */}
           <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-10 text-center px-6">
+            {/* 次回公演の告知。event.ts は前回公演のチケット・会場ページで参照中のため、ここは直書き */}
             <p className="text-lg md:text-xl text-white/70">
-              <span className="block md:inline">{formattedDate}</span>
+              <span className="block md:inline">2027年3月21日(日)</span>
               <span className="hidden md:inline">　</span>
-              <span className="block md:inline">15時開演</span>
-              <span className="hidden md:inline">　</span>
-              <span className="block md:inline">{event.venue}</span>
+              <span className="block md:inline">逗子文化プラザホール開催決定！</span>
             </p>
           </div>
 
